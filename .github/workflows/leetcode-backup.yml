@@ -1,0 +1,45 @@
+name: LeetCode Backup
+
+on:
+  workflow_dispatch: # Manual run
+  schedule:
+    # 05:00 UTC daily (= midnight US Eastern Standard Time, UTC-5)
+    - cron: '0 5 * * *'
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history so backdated commits can be pushed
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Configure git identity
+        run: |
+          git config user.name  "ny000815"
+          git config user.email "66006097+ny000815@users.noreply.github.com"
+
+      - name: Run scraper
+        env:
+          LEETCODE_SESSION: ${{ secrets.LEETCODE_SESSION }}
+          LEETCODE_CSRF_TOKEN: ${{ secrets.LEETCODE_CSRF_TOKEN }}
+        run: python fetch_submissions.py
+
+      - name: Push
+        run: |
+          if [ -n "$(git log origin/${GITHUB_REF_NAME}..HEAD --oneline)" ]; then
+            git push
+          else
+            echo "No new commits to push."
+          fi
