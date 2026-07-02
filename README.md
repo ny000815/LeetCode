@@ -1,21 +1,4 @@
 # LeetCode Submission Backup
-
-*([日本語版](#日本語版) / Japanese version below)*
-
-A GitHub Actions workflow that automatically backs up your **accepted** LeetCode submissions to a Git repository on a daily schedule.
-
-For each problem you have solved, it keeps the source code of your latest accepted submission, named by problem number and slug:
-
-```
-submissions/
-├── 0001-two-sum.py
-├── 0011-container-with-most-water.cpp
-├── 0146-lru-cache.py
-└── ...
-```
-
-The backup runs entirely on GitHub Actions, so once it is set up you do not need to run anything manually. Each solution is committed as a **separate commit whose date is set to when you actually solved the problem**, so the auto-commits land on your GitHub contribution graph on the day you solved each problem — see [Commit identity & contribution graph](#commit-identity--contribution-graph).
-
 <!-- STATS:START -->
 <div align="center">
 
@@ -33,6 +16,24 @@ The backup runs entirely on GitHub Actions, so once it is set up you do not need
 
 <div align="center">➡️ <b><a href="STATS.md">Full dashboard →</a></b></div>
 <!-- STATS:END -->
+
+*([日本語版](#日本語版) / Japanese version below)*
+
+A GitHub Actions workflow that automatically backs up your **accepted** LeetCode submissions to a Git repository on a daily schedule.
+
+For each problem you have solved, it keeps the source code of your latest accepted submission, named by problem number and slug:
+
+```
+submissions/
+├── 0001-two-sum.py
+├── 0011-container-with-most-water.cpp
+├── 0146-lru-cache.py
+└── ...
+```
+
+The backup runs entirely on GitHub Actions, so once it is set up you do not need to run anything manually. Each solution is committed as a **separate commit whose date is set to when you actually solved the problem**, so the auto-commits land on your GitHub contribution graph on the day you solved each problem — see [Commit identity & contribution graph](#commit-identity--contribution-graph).
+
+
 
 ---
 
