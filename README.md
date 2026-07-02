@@ -20,13 +20,13 @@ The backup runs entirely on GitHub Actions, so once it is set up you do not need
 
 ## How it works
 
-1. It calls the LeetCode GraphQL API (`submissionList`) with your session cookie to fetch the list of your submissions.
-2. The API returns 20 submissions per request, so the script **paginates** through all of them using `offset` / `hasNext` until everything has been fetched.
-3. It keeps only the latest accepted submission per problem.
-4. For each of those, it fetches the source code via `submissionDetails` and writes it to `submissions/<problem_number>-<title_slug>.<ext>`.
+1. It reads the **last sync time from git history**: each solution is committed with its date backdated to the submission time, so the most recent sync commit's date is the newest submission already backed up. The git log itself is the state store — no external database or state file.
+2. It calls the LeetCode GraphQL API (`submissionList`) with your session cookie, paginating newest-first via `offset` / `hasNext`, and **stops as soon as it reaches a submission at or before the last sync time**. So each run only pulls what's new.
+3. It keeps only the latest accepted submission per problem in that new batch.
+4. For each, it fetches the source code via `submissionDetails` and writes it to `submissions/<problem_number>-<title_slug>.<ext>`.
 5. Each file is committed individually with the commit date backdated to the submission time, and the workflow pushes them.
 
-If a file for a problem already exists (any file matching `*-<slug>.*`), it is skipped — so the daily run only fetches code for newly solved problems.
+Because syncing is keyed on submission time (not filename), a **new accepted submission to an already-solved problem is picked up and updates the file** on the next run. The very first run has no prior sync commit, so it backs up your entire accepted history.
 
 The API approach (GraphQL queries, headers, language map, locked-problem handling) is based on [joshcai/leetcode-sync](https://github.com/joshcai/leetcode-sync); the overall structure and workflow are based on the [AtCoder version](https://github.com/ny000815/AtCoder).
 
@@ -160,13 +160,13 @@ submissions/
 
 ## 仕組み
 
-1. LeetCode の GraphQL API（`submissionList`）をセッション Cookie 付きで呼び出し、自分の提出一覧を取得します。
-2. 1 リクエストにつき 20 件しか返らないため、`offset` / `hasNext` を使って全件取得できるまでページングします。
-3. 各問題について、最新の AC 提出だけを残します。
+1. **前回同期時刻を git 履歴から読み取ります**。各解答はコミット日時を提出日時に遡らせて記録されるため、直近の同期コミットの日時＝すでにバックアップ済みの最新提出の時刻になります。git のログそのものが状態ストアで、外部 DB や状態ファイルは不要です。
+2. LeetCode の GraphQL API（`submissionList`）をセッション Cookie 付きで新しい順にページングし、**前回同期時刻以前の提出に達した時点で取得を打ち切ります**。つまり毎回「新しい分だけ」を取得します。
+3. その新規バッチの中で、各問題の最新 AC 提出だけを残します。
 4. それぞれの提出について `submissionDetails` でソースコードを取得し、`submissions/<問題番号>-<title_slug>.<ext>` に書き出します。
 5. 各ファイルを、コミット日時を提出日時に遡らせて個別にコミットし、ワークフローが push します。
 
-ある問題のファイル（`*-<slug>.*` に一致するもの）が既に存在する場合はスキップされます。そのため、毎日の実行では新しく解いた問題のコードだけを取得します。
+同期の基準は提出日時（ファイル名ではない）なので、**既に解いた問題に新しい AC 提出をすると、次回実行時にそれを取り込んでファイルを更新します**。初回実行時は同期コミットが無いため、AC 履歴の全件をバックアップします。
 
 API の実装方針（GraphQL クエリ・ヘッダ・言語マップ・ロック問題の扱い）は [joshcai/leetcode-sync](https://github.com/joshcai/leetcode-sync) を、全体構成とワークフローは [AtCoder 版](https://github.com/ny000815/AtCoder) を参考にしています。
 

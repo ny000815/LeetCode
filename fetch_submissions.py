@@ -9,6 +9,9 @@ SUBMISSIONS_DIR = "submissions"
 BASE_URL = "https://leetcode.com"
 GRAPHQL_URL = "https://leetcode.com/graphql/"
 
+# Commit messages start with this; used to read the last sync time from git history.
+COMMIT_PREFIX = "Sync LeetCode submission"
+
 # When set (DRY_RUN=1), no files are written and no commits are made.
 DRY_RUN = os.environ.get("DRY_RUN") == "1"
 
@@ -121,13 +124,35 @@ query submissionDetails($submissionId: Int!) {
 """
 
 
-def fetch_all_submissions(session_obj):
-    """Page through submissionList until hasNext is false."""
-    all_subs = []
+def get_last_sync_timestamp():
+    """Read the last synced submission time from git history.
+
+    We backdate each commit to its submission time, so the most recent sync
+    commit's date is the newest submission we have already synced. The git log
+    itself is the state store — no external database or state file is needed.
+    """
+    try:
+        out = subprocess.run(
+            ["git", "log", "-1", f"--grep={COMMIT_PREFIX}", "--format=%ct"],
+            capture_output=True,
+            text=True,
+            check=True,
+        ).stdout.strip()
+        return int(out) if out else 0
+    except Exception:
+        return 0
+
+
+def fetch_new_submissions(session_obj, last_ts):
+    """Page through submissionList (newest first), stopping once we reach a
+    submission at or before last_ts. Returns Accepted submissions newer than
+    last_ts."""
+    collected = []
     offset = 0
     limit = 20
     first = True
-    while True:
+    stop = False
+    while not stop:
         if not first:
             time.sleep(1)
         first = False
@@ -144,19 +169,25 @@ def fetch_all_submissions(session_obj):
             sys.exit(1)
 
         batch = sub_list["submissions"]
-        all_subs.extend(batch)
-        print(f"  offset={offset}: {len(batch)} rows (total {len(all_subs)})")
+        for sub in batch:
+            if int(sub["timestamp"]) <= last_ts:
+                stop = True
+                break
+            if sub["statusDisplay"] == "Accepted":
+                collected.append(sub)
 
-        if not sub_list["hasNext"]:
+        print(f"  offset={offset}: {len(batch)} rows ({len(collected)} new AC so far)")
+
+        if stop or not sub_list["hasNext"]:
             break
         offset += limit
 
-    return all_subs
+    return collected
 
 
 def get_details(session_obj, sub_id):
     """Return (code, question_frontend_id) or None if locked/unavailable."""
-    response, data = graphql_post(
+    _, data = graphql_post(
         session_obj, SUBMISSION_DETAILS_QUERY, {"submissionId": int(sub_id)}
     )
     if data is None:  # 403 locked problem
@@ -182,10 +213,16 @@ def git_commit(file_path, title, epoch):
     env["GIT_COMMITTER_DATE"] = iso
     subprocess.run(["git", "add", file_path], check=True)
     subprocess.run(
-        ["git", "commit", "-m", f"Sync LeetCode submission - {title}"],
+        ["git", "commit", "-m", f"{COMMIT_PREFIX} - {title}"],
         check=True,
         env=env,
     )
+
+
+def _slug_of(file_name):
+    """Extract the <slug> from a "<qid>-<slug>.<ext>" file name."""
+    stem = file_name.rsplit(".", 1)[0]
+    return stem.split("-", 1)[1] if "-" in stem else stem
 
 
 def main():
@@ -195,33 +232,25 @@ def main():
 
     os.makedirs(SUBMISSIONS_DIR, exist_ok=True)
 
-    submissions = fetch_all_submissions(session_obj)
-    if not submissions:
-        print("ERROR: API returned 0 submissions. Aborting (likely blocked).")
-        sys.exit(1)
+    last_ts = get_last_sync_timestamp()
+    if last_ts:
+        print(f"Last sync timestamp (from git history): {last_ts}")
+    else:
+        print("No previous sync found; performing a full backup.")
 
-    print(f"Fetched {len(submissions)} submissions from API.")
+    new_subs = fetch_new_submissions(session_obj, last_ts)
 
     # Keep only the latest Accepted submission per problem (by titleSlug).
     latest_ac = {}
-    for sub in submissions:
-        if sub["statusDisplay"] != "Accepted":
-            continue
+    for sub in new_subs:
         slug = sub["titleSlug"]
         ts = int(sub["timestamp"])
         if slug not in latest_ac or ts > int(latest_ac[slug]["timestamp"]):
             latest_ac[slug] = sub
 
-    print(f"{len(latest_ac)} problems have at least one Accepted submission.")
-
-    # Skip problems already backed up (any file matching "*-<slug>.*").
-    existing = set(os.listdir(SUBMISSIONS_DIR)) if os.path.isdir(SUBMISSIONS_DIR) else set()
-
-    todo = [sub for slug, sub in latest_ac.items() if not _slug_exists(existing, slug)]
-
     # Oldest first so backdated commits are laid down in chronological order.
-    todo.sort(key=lambda s: int(s["timestamp"]))
-    print(f"{len(todo)} new problems to fetch.")
+    todo = sorted(latest_ac.values(), key=lambda s: int(s["timestamp"]))
+    print(f"{len(todo)} problems to sync (new or newly re-accepted).")
 
     new_count = 0
     for sub in todo:
@@ -258,16 +287,6 @@ def main():
         print(f"Done (dry-run). {new_count} files would be written.")
     else:
         print(f"Done. {new_count} files written and committed.")
-
-
-def _slug_of(file_name):
-    """Extract the <slug> from a "<qid>-<slug>.<ext>" file name."""
-    stem = file_name.rsplit(".", 1)[0]
-    return stem.split("-", 1)[1] if "-" in stem else stem
-
-
-def _slug_exists(existing, slug):
-    return any(_slug_of(f) == slug for f in existing)
 
 
 if __name__ == "__main__":
