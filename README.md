@@ -16,6 +16,8 @@ submissions/
 
 The backup runs entirely on GitHub Actions, so once it is set up you do not need to run anything manually. Each solution is committed as a **separate commit whose date is set to when you actually solved the problem**, so the auto-commits land on your GitHub contribution graph on the day you solved each problem — see [Commit identity & contribution graph](#commit-identity--contribution-graph).
 
+📊 **[STATS.md](STATS.md)** — auto-generated dashboard (solved counts by difficulty / topic / language).
+
 ---
 
 ## How it works

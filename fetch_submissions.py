@@ -3,97 +3,15 @@ import sys
 import time
 import subprocess
 
-import requests
+from leetcode_api import get_extension, graphql_post, make_session, slug_of
 
 SUBMISSIONS_DIR = "submissions"
-BASE_URL = "https://leetcode.com"
-GRAPHQL_URL = "https://leetcode.com/graphql/"
 
 # Commit messages start with this; used to read the last sync time from git history.
 COMMIT_PREFIX = "Sync LeetCode submission"
 
 # When set (DRY_RUN=1), no files are written and no commits are made.
 DRY_RUN = os.environ.get("DRY_RUN") == "1"
-
-# LeetCode language slug -> file extension (from joshcai/leetcode-sync).
-LANG_TO_EXTENSION = {
-    "bash": "sh",
-    "c": "c",
-    "cpp": "cpp",
-    "csharp": "cs",
-    "dart": "dart",
-    "elixir": "ex",
-    "erlang": "erl",
-    "golang": "go",
-    "java": "java",
-    "javascript": "js",
-    "kotlin": "kt",
-    "mssql": "sql",
-    "mysql": "sql",
-    "oraclesql": "sql",
-    "php": "php",
-    "python": "py",
-    "python3": "py",
-    "pythondata": "py",
-    "postgresql": "sql",
-    "racket": "rkt",
-    "ruby": "rb",
-    "rust": "rs",
-    "scala": "scala",
-    "swift": "swift",
-    "typescript": "ts",
-}
-
-USER_AGENT = (
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36"
-)
-
-
-def get_credentials():
-    session = os.environ.get("LEETCODE_SESSION")
-    csrf = os.environ.get("LEETCODE_CSRF_TOKEN")
-    if not session or not csrf:
-        print(
-            "ERROR: LEETCODE_SESSION and LEETCODE_CSRF_TOKEN environment "
-            "variables must both be set."
-        )
-        sys.exit(1)
-    return session, csrf
-
-
-def build_headers(session, csrf):
-    return {
-        "content-type": "application/json",
-        "origin": BASE_URL,
-        "referer": BASE_URL,
-        "user-agent": USER_AGENT,
-        "x-csrftoken": csrf,
-        "cookie": f"csrftoken={csrf}; LEETCODE_SESSION={session};",
-    }
-
-
-def get_extension(lang):
-    return LANG_TO_EXTENSION.get(lang, "txt")
-
-
-def graphql_post(session_obj, query, variables, max_retries=5):
-    """POST a GraphQL query with exponential backoff on failure."""
-    payload = {"query": query, "variables": variables}
-    for retry in range(max_retries + 1):
-        try:
-            response = session_obj.post(GRAPHQL_URL, json=payload, timeout=30)
-            # Locked problems (no LeetCode Premium) return 403.
-            if response.status_code == 403:
-                return response, None
-            response.raise_for_status()
-            return response, response.json()
-        except Exception as e:
-            if retry >= max_retries:
-                raise
-            wait = 3 ** retry
-            print(f"  WARN: request failed ({e}); retrying in {wait}s...")
-            time.sleep(wait)
 
 
 SUBMISSION_LIST_QUERY = """
@@ -219,16 +137,8 @@ def git_commit(file_path, title, epoch):
     )
 
 
-def _slug_of(file_name):
-    """Extract the <slug> from a "<qid>-<slug>.<ext>" file name."""
-    stem = file_name.rsplit(".", 1)[0]
-    return stem.split("-", 1)[1] if "-" in stem else stem
-
-
 def main():
-    session, csrf = get_credentials()
-    session_obj = requests.Session()
-    session_obj.headers.update(build_headers(session, csrf))
+    session_obj = make_session()
 
     os.makedirs(SUBMISSIONS_DIR, exist_ok=True)
 
@@ -273,7 +183,7 @@ def main():
 
         # Remove stale files for the same slug (different qid/extension).
         for old in os.listdir(SUBMISSIONS_DIR):
-            if _slug_of(old) == slug and old != file_name:
+            if slug_of(old) == slug and old != file_name:
                 os.remove(os.path.join(SUBMISSIONS_DIR, old))
 
         print(f"Writing {file_name} (submission {sub['id']})...")

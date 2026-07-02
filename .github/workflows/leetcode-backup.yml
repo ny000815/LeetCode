@@ -36,6 +36,17 @@ jobs:
           LEETCODE_CSRF_TOKEN: ${{ secrets.LEETCODE_CSRF_TOKEN }}
         run: python fetch_submissions.py
 
+      - name: Generate stats
+        env:
+          LEETCODE_SESSION: ${{ secrets.LEETCODE_SESSION }}
+          LEETCODE_CSRF_TOKEN: ${{ secrets.LEETCODE_CSRF_TOKEN }}
+        run: |
+          python generate_stats.py
+          git add STATS.md data/problems.json
+          if ! git diff --staged --quiet; then
+            git commit -m "Update stats dashboard"
+          fi
+
       - name: Push
         run: |
           if [ -n "$(git log origin/${GITHUB_REF_NAME}..HEAD --oneline)" ]; then
