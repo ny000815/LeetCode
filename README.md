@@ -17,25 +17,21 @@ submissions/
 The backup runs entirely on GitHub Actions, so once it is set up you do not need to run anything manually. Each solution is committed as a **separate commit whose date is set to when you actually solved the problem**, so the auto-commits land on your GitHub contribution graph on the day you solved each problem — see [Commit identity & contribution graph](#commit-identity--contribution-graph).
 
 <!-- STATS:START -->
-## 📊 LeetCode Stats
+<div align="center">
 
-### 👤 zaki8 &nbsp;·&nbsp; 🏆 Global ranking **#1,933,869**
+![LeetCode](https://img.shields.io/badge/LeetCode-zaki8-1a1a1a?style=for-the-badge&logo=leetcode&logoColor=white)
 
-| **Solved** | Easy | Medium | Hard |
-| --- | --- | --- | --- |
-| **77** | 29/951 (3.0%) | 46/2077 (2.2%) | 2/949 (0.2%) |
+![Solved](https://img.shields.io/badge/Solved-77-1f6feb?style=for-the-badge) ![Easy](https://img.shields.io/badge/Easy-29%2F951-00b8a3?style=for-the-badge) ![Medium](https://img.shields.io/badge/Medium-46%2F2077-ffb800?style=for-the-badge) ![Hard](https://img.shields.io/badge/Hard-2%2F949-ef4743?style=for-the-badge)
 
-_Acceptance rate: 98.7%_
+![🔥 Streak](https://img.shields.io/badge/%F0%9F%94%A5%20Streak-9%20days-ff6b6b?style=for-the-badge) ![🏆 Rank](https://img.shields.io/badge/%F0%9F%8F%86%20Rank-%231%2C933%2C869-8957e5?style=for-the-badge) ![Acceptance](https://img.shields.io/badge/Acceptance-98.7%25-2ea043?style=for-the-badge)
 
-<img src="https://assets.leetcode.com/users/zaki8/avatar_1775120748.png" width="64" align="right" alt="avatar" />
+![cpp](https://img.shields.io/badge/cpp-56-555555?style=flat-square) ![java](https://img.shields.io/badge/java-11-555555?style=flat-square) ![py](https://img.shields.io/badge/py-10-555555?style=flat-square)
 
-🔥 **Current streak:** 9 day(s) &nbsp;·&nbsp; **Longest:** 9 day(s)
+![Array](https://img.shields.io/badge/Array-43-0d1117?style=flat-square) ![String](https://img.shields.io/badge/String-17-0d1117?style=flat-square) ![Two Pointers](https://img.shields.io/badge/Two%20Pointers-13-0d1117?style=flat-square) ![Hash Table](https://img.shields.io/badge/Hash%20Table-13-0d1117?style=flat-square) ![Linked List](https://img.shields.io/badge/Linked%20List-11-0d1117?style=flat-square) ![Breadth-First Search](https://img.shields.io/badge/Breadth--First%20Search-11-0d1117?style=flat-square)
 
-**Top languages:** `cpp` 56, `java` 11, `py` 10
+</div>
 
-**Top topics:** Array (43) · String (17) · Two Pointers (13) · Hash Table (13) · Linked List (11) · Breadth-First Search (11) · Stack (9) · Depth-First Search (9)
-
-➡️ Full dashboard: **[STATS.md](STATS.md)** _(updated 2026-07-02)_
+<div align="center">➡️ <b><a href="STATS.md">Full dashboard →</a></b></div>
 <!-- STATS:END -->
 
 ---
