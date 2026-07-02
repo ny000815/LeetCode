@@ -17,7 +17,25 @@ submissions/
 The backup runs entirely on GitHub Actions, so once it is set up you do not need to run anything manually. Each solution is committed as a **separate commit whose date is set to when you actually solved the problem**, so the auto-commits land on your GitHub contribution graph on the day you solved each problem — see [Commit identity & contribution graph](#commit-identity--contribution-graph).
 
 <!-- STATS:START -->
-📊 **[STATS.md](STATS.md)** — auto-generated dashboard (solved counts by difficulty / topic / language). _(This section is auto-updated by `generate_stats.py`.)_
+## 📊 LeetCode Stats
+
+### 👤 zaki8 &nbsp;·&nbsp; 🏆 Global ranking **#1,933,869**
+
+| **Solved** | Easy | Medium | Hard |
+| --- | --- | --- | --- |
+| **77** | 29/951 (3.0%) | 46/2077 (2.2%) | 2/949 (0.2%) |
+
+_Acceptance rate: 98.7%_
+
+<img src="https://assets.leetcode.com/users/zaki8/avatar_1775120748.png" width="64" align="right" alt="avatar" />
+
+🔥 **Current streak:** 9 day(s) &nbsp;·&nbsp; **Longest:** 9 day(s)
+
+**Top languages:** `cpp` 56, `java` 11, `py` 10
+
+**Top topics:** Array (43) · String (17) · Two Pointers (13) · Hash Table (13) · Linked List (11) · Breadth-First Search (11) · Stack (9) · Depth-First Search (9)
+
+➡️ Full dashboard: **[STATS.md](STATS.md)** _(updated 2026-07-02)_
 <!-- STATS:END -->
 
 ---
