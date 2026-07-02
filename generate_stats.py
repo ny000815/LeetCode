@@ -12,6 +12,7 @@ import subprocess
 import time
 from collections import Counter, defaultdict
 from datetime import datetime, timedelta, timezone
+from urllib.parse import quote
 
 from leetcode_api import graphql_post, make_session, slug_of
 
@@ -25,6 +26,18 @@ README_START = "<!-- STATS:START -->"
 README_END = "<!-- STATS:END -->"
 
 DIFFICULTY_ORDER = ["Easy", "Medium", "Hard"]
+DIFF_COLOR = {"Easy": "00b8a3", "Medium": "ffb800", "Hard": "ef4743"}  # LeetCode palette
+
+
+def _shield(label, message, color, logo=None, style="for-the-badge"):
+    """Build a shields.io badge as a markdown image."""
+    def enc(s):
+        return quote(str(s).replace("-", "--").replace("_", "__"), safe="")
+
+    url = f"https://img.shields.io/badge/{enc(label)}-{enc(message)}-{color}?style={style}"
+    if logo:
+        url += f"&logo={logo}&logoColor=white"
+    return f"![{label}]({url})"
 
 QUESTION_QUERY = """
 query getQuestion($titleSlug: String!) {
@@ -303,32 +316,60 @@ def _profile_card(profile, total_solved):
 
 
 def render_readme_summary(cache, profile):
-    """Compact block embedded between the README STATS markers."""
-    problems = list(cache.values())
-    total = len(problems)
-    lang_counts = Counter(p.get("ext", "?") for p in problems)
-    topic_counts = Counter(t for p in problems for t in p.get("topics", []))
-    current, longest = compute_streaks(cache)
-    now = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    """Badge-wall summary embedded between the README STATS markers.
 
-    lines = ["## 📊 LeetCode Stats", ""]
-    lines += _profile_card(profile, total)
-    lines.append(
-        f"🔥 **Current streak:** {current} day(s) &nbsp;·&nbsp; "
-        f"**Longest:** {longest} day(s)"
-    )
+    Difficulty badges show `solved/total` (coverage) when profile data is
+    available, otherwise the backed-up counts."""
+    counts = Counter(p.get("difficulty", "Unknown") for p in cache.values())
+    lang_counts = Counter(p.get("ext", "?") for p in cache.values())
+    topic_counts = Counter(t for p in cache.values() for t in p.get("topics", []))
+    current, _ = compute_streaks(cache)
+    p = profile or {}
+    solved = p.get("solved") or {}
+    totals = p.get("total") or {}
+    total = solved.get("All", len(cache))
+
+    def diff_msg(d):
+        s = solved.get(d, counts.get(d, 0))
+        t = totals.get(d)
+        return f"{s}/{t}" if t else str(s)
+
+    lines = ['<div align="center">', ""]
+    lines.append(_shield("LeetCode", p.get("username", "solved"), "1a1a1a", logo="leetcode"))
     lines.append("")
 
-    top_langs = ", ".join(f"`{e}` {c}" for e, c in lang_counts.most_common(3))
-    if top_langs:
-        lines.append(f"**Top languages:** {top_langs}")
-        lines.append("")
-    top_topics = " · ".join(f"{t} ({c})" for t, c in topic_counts.most_common(8))
-    if top_topics:
-        lines.append(f"**Top topics:** {top_topics}")
+    row = _shield("Solved", total, "1f6feb")
+    for d in DIFFICULTY_ORDER:
+        row += " " + _shield(d, diff_msg(d), DIFF_COLOR[d])
+    lines.append(row)
+    lines.append("")
+
+    row2 = _shield("🔥 Streak", f"{current} days", "ff6b6b")
+    if p.get("ranking"):
+        row2 += " " + _shield("🏆 Rank", f"#{p['ranking']:,}", "8957e5")
+    if p.get("acceptanceRate") is not None:
+        row2 += " " + _shield("Acceptance", f"{p['acceptanceRate']:.1f}%", "2ea043")
+    lines.append(row2)
+    lines.append("")
+
+    langs = " ".join(
+        _shield(e, c, "555555", style="flat-square") for e, c in lang_counts.most_common(5)
+    )
+    if langs:
+        lines.append(langs)
         lines.append("")
 
-    lines.append(f"➡️ Full dashboard: **[STATS.md](STATS.md)** _(updated {now})_")
+    topics = " ".join(
+        _shield(t, c, "0d1117", style="flat-square")
+        for t, c in topic_counts.most_common(6)
+    )
+    if topics:
+        lines.append(topics)
+        lines.append("")
+
+    lines.append("</div>")
+    lines.append("")
+    lines.append('<div align="center">➡️ <b><a href="STATS.md">Full dashboard →</a></b></div>')
     return "\n".join(lines).strip()
 
 
