@@ -1,0 +1,1001 @@
+{
+  "3sum": {
+    "difficulty": "Medium",
+    "ext": "java",
+    "file": "15-3sum.java",
+    "qid": "15",
+    "timestamp": 1781922925,
+    "title": "3Sum",
+    "topics": [
+      "Array",
+      "Two Pointers",
+      "Sorting"
+    ]
+  },
+  "add-two-numbers": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "2-add-two-numbers.cpp",
+    "qid": "2",
+    "timestamp": 1722731894,
+    "title": "Add Two Numbers",
+    "topics": [
+      "Linked List",
+      "Math",
+      "Recursion"
+    ]
+  },
+  "asteroid-collision": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "735-asteroid-collision.cpp",
+    "qid": "735",
+    "timestamp": 1720883145,
+    "title": "Asteroid Collision",
+    "topics": [
+      "Array",
+      "Stack",
+      "Simulation"
+    ]
+  },
+  "best-time-to-buy-and-sell-stock": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "121-best-time-to-buy-and-sell-stock.cpp",
+    "qid": "121",
+    "timestamp": 1782750485,
+    "title": "Best Time to Buy and Sell Stock",
+    "topics": [
+      "Array",
+      "Dynamic Programming"
+    ]
+  },
+  "boats-to-save-people": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "881-boats-to-save-people.cpp",
+    "qid": "881",
+    "timestamp": 1782747391,
+    "title": "Boats to Save People",
+    "topics": [
+      "Array",
+      "Two Pointers",
+      "Greedy",
+      "Sorting"
+    ]
+  },
+  "can-place-flowers": {
+    "difficulty": "Easy",
+    "ext": "py",
+    "file": "605-can-place-flowers.py",
+    "qid": "605",
+    "timestamp": 1767953232,
+    "title": "Can Place Flowers",
+    "topics": [
+      "Array",
+      "Greedy"
+    ]
+  },
+  "cheapest-flights-within-k-stops": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "787-cheapest-flights-within-k-stops.cpp",
+    "qid": "787",
+    "timestamp": 1782696272,
+    "title": "Cheapest Flights Within K Stops",
+    "topics": [
+      "Dynamic Programming",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Graph Theory",
+      "Heap (Priority Queue)",
+      "Shortest Path"
+    ]
+  },
+  "coin-change": {
+    "difficulty": "Medium",
+    "ext": "py",
+    "file": "322-coin-change.py",
+    "qid": "322",
+    "timestamp": 1779810660,
+    "title": "Coin Change",
+    "topics": [
+      "Array",
+      "Dynamic Programming",
+      "Breadth-First Search"
+    ]
+  },
+  "container-with-most-water": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "11-container-with-most-water.cpp",
+    "qid": "11",
+    "timestamp": 1782830457,
+    "title": "Container With Most Water",
+    "topics": [
+      "Array",
+      "Two Pointers",
+      "Greedy"
+    ]
+  },
+  "contains-duplicate": {
+    "difficulty": "Easy",
+    "ext": "java",
+    "file": "217-contains-duplicate.java",
+    "qid": "217",
+    "timestamp": 1780709222,
+    "title": "Contains Duplicate",
+    "topics": [
+      "Array",
+      "Hash Table",
+      "Sorting"
+    ]
+  },
+  "course-schedule": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "207-course-schedule.cpp",
+    "qid": "207",
+    "timestamp": 1782745223,
+    "title": "Course Schedule",
+    "topics": [
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Graph Theory",
+      "Topological Sort"
+    ]
+  },
+  "daily-temperatures": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "739-daily-temperatures.cpp",
+    "qid": "739",
+    "timestamp": 1782826668,
+    "title": "Daily Temperatures",
+    "topics": [
+      "Array",
+      "Stack",
+      "Monotonic Stack"
+    ]
+  },
+  "decode-string": {
+    "difficulty": "Medium",
+    "ext": "java",
+    "file": "394-decode-string.java",
+    "qid": "394",
+    "timestamp": 1780623042,
+    "title": "Decode String",
+    "topics": [
+      "String",
+      "Stack",
+      "Recursion"
+    ]
+  },
+  "design-hashmap": {
+    "difficulty": "Easy",
+    "ext": "java",
+    "file": "706-design-hashmap.java",
+    "qid": "706",
+    "timestamp": 1782145105,
+    "title": "Design HashMap",
+    "topics": [
+      "Array",
+      "Hash Table",
+      "Linked List",
+      "Design",
+      "Hash Function"
+    ]
+  },
+  "design-linked-list": {
+    "difficulty": "Medium",
+    "ext": "java",
+    "file": "707-design-linked-list.java",
+    "qid": "707",
+    "timestamp": 1782009268,
+    "title": "Design Linked List",
+    "topics": [
+      "Linked List",
+      "Design"
+    ]
+  },
+  "find-pivot-index": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "724-find-pivot-index.cpp",
+    "qid": "724",
+    "timestamp": 1721392563,
+    "title": "Find Pivot Index",
+    "topics": [
+      "Array",
+      "Prefix Sum"
+    ]
+  },
+  "find-the-highest-altitude": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "1732-find-the-highest-altitude.cpp",
+    "qid": "1732",
+    "timestamp": 1721132519,
+    "title": "Find the Highest Altitude",
+    "topics": [
+      "Array",
+      "Prefix Sum"
+    ]
+  },
+  "game-of-life": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "289-game-of-life.cpp",
+    "qid": "289",
+    "timestamp": 1782498924,
+    "title": "Game of Life",
+    "topics": [
+      "Array",
+      "Matrix",
+      "Simulation"
+    ]
+  },
+  "greatest-common-divisor-of-strings": {
+    "difficulty": "Easy",
+    "ext": "py",
+    "file": "1071-greatest-common-divisor-of-strings.py",
+    "qid": "1071",
+    "timestamp": 1767929452,
+    "title": "Greatest Common Divisor of Strings",
+    "topics": [
+      "Math",
+      "String"
+    ]
+  },
+  "increasing-triplet-subsequence": {
+    "difficulty": "Medium",
+    "ext": "py",
+    "file": "334-increasing-triplet-subsequence.py",
+    "qid": "334",
+    "timestamp": 1768825970,
+    "title": "Increasing Triplet Subsequence",
+    "topics": [
+      "Array",
+      "Greedy"
+    ]
+  },
+  "insert-greatest-common-divisors-in-linked-list": {
+    "difficulty": "Medium",
+    "ext": "java",
+    "file": "2807-insert-greatest-common-divisors-in-linked-list.java",
+    "qid": "2807",
+    "timestamp": 1781999054,
+    "title": "Insert Greatest Common Divisors in Linked List",
+    "topics": [
+      "Linked List",
+      "Math",
+      "Number Theory"
+    ]
+  },
+  "insert-interval": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "57-insert-interval.cpp",
+    "qid": "57",
+    "timestamp": 1782587710,
+    "title": "Insert Interval",
+    "topics": [
+      "Array"
+    ]
+  },
+  "intersection-of-two-linked-lists": {
+    "difficulty": "Easy",
+    "ext": "java",
+    "file": "160-intersection-of-two-linked-lists.java",
+    "qid": "160",
+    "timestamp": 1781981365,
+    "title": "Intersection of Two Linked Lists",
+    "topics": [
+      "Hash Table",
+      "Linked List",
+      "Two Pointers"
+    ]
+  },
+  "interval-list-intersections": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "986-interval-list-intersections.cpp",
+    "qid": "986",
+    "timestamp": 1782591896,
+    "title": "Interval List Intersections",
+    "topics": [
+      "Array",
+      "Two Pointers",
+      "Sweep Line"
+    ]
+  },
+  "is-subsequence": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "392-is-subsequence.cpp",
+    "qid": "392",
+    "timestamp": 1721040002,
+    "title": "Is Subsequence",
+    "topics": [
+      "Two Pointers",
+      "String",
+      "Dynamic Programming"
+    ]
+  },
+  "kids-with-the-greatest-number-of-candies": {
+    "difficulty": "Easy",
+    "ext": "py",
+    "file": "1431-kids-with-the-greatest-number-of-candies.py",
+    "qid": "1431",
+    "timestamp": 1768005318,
+    "title": "Kids With the Greatest Number of Candies",
+    "topics": [
+      "Array"
+    ]
+  },
+  "koko-eating-bananas": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "875-koko-eating-bananas.cpp",
+    "qid": "875",
+    "timestamp": 1782659286,
+    "title": "Koko Eating Bananas",
+    "topics": [
+      "Array",
+      "Binary Search"
+    ]
+  },
+  "kth-distinct-string-in-an-array": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "2053-kth-distinct-string-in-an-array.cpp",
+    "qid": "2053",
+    "timestamp": 1722869255,
+    "title": "Kth Distinct String in an Array",
+    "topics": [
+      "Array",
+      "Hash Table",
+      "String",
+      "Counting"
+    ]
+  },
+  "largest-rectangle-in-histogram": {
+    "difficulty": "Hard",
+    "ext": "cpp",
+    "file": "84-largest-rectangle-in-histogram.cpp",
+    "qid": "84",
+    "timestamp": 1782314579,
+    "title": "Largest Rectangle in Histogram",
+    "topics": [
+      "Array",
+      "Stack",
+      "Monotonic Stack"
+    ]
+  },
+  "letter-combinations-of-a-phone-number": {
+    "difficulty": "Medium",
+    "ext": "java",
+    "file": "17-letter-combinations-of-a-phone-number.java",
+    "qid": "17",
+    "timestamp": 1780765261,
+    "title": "Letter Combinations of a Phone Number",
+    "topics": [
+      "Hash Table",
+      "String",
+      "Backtracking"
+    ]
+  },
+  "linked-list-random-node": {
+    "difficulty": "Medium",
+    "ext": "java",
+    "file": "382-linked-list-random-node.java",
+    "qid": "382",
+    "timestamp": 1781986502,
+    "title": "Linked List Random Node",
+    "topics": [
+      "Linked List",
+      "Math",
+      "Reservoir Sampling",
+      "Randomized"
+    ]
+  },
+  "longest-common-prefix": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "14-longest-common-prefix.cpp",
+    "qid": "14",
+    "timestamp": 1735853763,
+    "title": "Longest Common Prefix",
+    "topics": [
+      "Array",
+      "String",
+      "Trie"
+    ]
+  },
+  "longest-repeating-character-replacement": {
+    "difficulty": "Medium",
+    "ext": "py",
+    "file": "424-longest-repeating-character-replacement.py",
+    "qid": "424",
+    "timestamp": 1781810323,
+    "title": "Longest Repeating Character Replacement",
+    "topics": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ]
+  },
+  "longest-substring-without-repeating-characters": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "3-longest-substring-without-repeating-characters.cpp",
+    "qid": "3",
+    "timestamp": 1782834078,
+    "title": "Longest Substring Without Repeating Characters",
+    "topics": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ]
+  },
+  "lru-cache": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "146-lru-cache.cpp",
+    "qid": "146",
+    "timestamp": 1782398999,
+    "title": "LRU Cache",
+    "topics": [
+      "Hash Table",
+      "Linked List",
+      "Design",
+      "Doubly-Linked List"
+    ]
+  },
+  "max-consecutive-ones-iii": {
+    "difficulty": "Medium",
+    "ext": "py",
+    "file": "1004-max-consecutive-ones-iii.py",
+    "qid": "1004",
+    "timestamp": 1781811133,
+    "title": "Max Consecutive Ones III",
+    "topics": [
+      "Array",
+      "Binary Search",
+      "Sliding Window",
+      "Prefix Sum"
+    ]
+  },
+  "maximum-depth-of-binary-tree": {
+    "difficulty": "Easy",
+    "ext": "py",
+    "file": "104-maximum-depth-of-binary-tree.py",
+    "qid": "104",
+    "timestamp": 1768550026,
+    "title": "Maximum Depth of Binary Tree",
+    "topics": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ]
+  },
+  "maximum-score-from-removing-substrings": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "1717-maximum-score-from-removing-substrings.cpp",
+    "qid": "1717",
+    "timestamp": 1720784972,
+    "title": "Maximum Score From Removing Substrings",
+    "topics": [
+      "String",
+      "Stack",
+      "Greedy"
+    ]
+  },
+  "merge-intervals": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "56-merge-intervals.cpp",
+    "qid": "56",
+    "timestamp": 1782585704,
+    "title": "Merge Intervals",
+    "topics": [
+      "Array",
+      "Sorting"
+    ]
+  },
+  "merge-strings-alternately": {
+    "difficulty": "Easy",
+    "ext": "py",
+    "file": "1768-merge-strings-alternately.py",
+    "qid": "1768",
+    "timestamp": 1767927389,
+    "title": "Merge Strings Alternately",
+    "topics": [
+      "Two Pointers",
+      "String"
+    ]
+  },
+  "merge-two-sorted-lists": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "21-merge-two-sorted-lists.cpp",
+    "qid": "21",
+    "timestamp": 1722005698,
+    "title": "Merge Two Sorted Lists",
+    "topics": [
+      "Linked List",
+      "Recursion"
+    ]
+  },
+  "minimum-size-subarray-sum": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "209-minimum-size-subarray-sum.cpp",
+    "qid": "209",
+    "timestamp": 1782842440,
+    "title": "Minimum Size Subarray Sum",
+    "topics": [
+      "Array",
+      "Binary Search",
+      "Sliding Window",
+      "Prefix Sum"
+    ]
+  },
+  "move-zeroes": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "283-move-zeroes.cpp",
+    "qid": "283",
+    "timestamp": 1782829852,
+    "title": "Move Zeroes",
+    "topics": [
+      "Array",
+      "Two Pointers"
+    ]
+  },
+  "network-delay-time": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "743-network-delay-time.cpp",
+    "qid": "743",
+    "timestamp": 1782693296,
+    "title": "Network Delay Time",
+    "topics": [
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Graph Theory",
+      "Heap (Priority Queue)",
+      "Shortest Path"
+    ]
+  },
+  "non-overlapping-intervals": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "435-non-overlapping-intervals.cpp",
+    "qid": "435",
+    "timestamp": 1782601796,
+    "title": "Non-overlapping Intervals",
+    "topics": [
+      "Array",
+      "Dynamic Programming",
+      "Greedy",
+      "Sorting"
+    ]
+  },
+  "number-of-islands": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "200-number-of-islands.cpp",
+    "qid": "200",
+    "timestamp": 1782488236,
+    "title": "Number of Islands",
+    "topics": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Union-Find",
+      "Matrix"
+    ]
+  },
+  "number-of-students-unable-to-eat-lunch": {
+    "difficulty": "Easy",
+    "ext": "java",
+    "file": "1700-number-of-students-unable-to-eat-lunch.java",
+    "qid": "1700",
+    "timestamp": 1780619270,
+    "title": "Number of Students Unable to Eat Lunch",
+    "topics": [
+      "Array",
+      "Stack",
+      "Queue",
+      "Simulation"
+    ]
+  },
+  "odd-even-linked-list": {
+    "difficulty": "Medium",
+    "ext": "java",
+    "file": "328-odd-even-linked-list.java",
+    "qid": "328",
+    "timestamp": 1781981197,
+    "title": "Odd Even Linked List",
+    "topics": [
+      "Linked List"
+    ]
+  },
+  "online-stock-span": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "901-online-stock-span.cpp",
+    "qid": "901",
+    "timestamp": 1782749463,
+    "title": "Online Stock Span",
+    "topics": [
+      "Stack",
+      "Design",
+      "Monotonic Stack",
+      "Data Stream"
+    ]
+  },
+  "palindrome-number": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "9-palindrome-number.cpp",
+    "qid": "9",
+    "timestamp": 1721659929,
+    "title": "Palindrome Number",
+    "topics": [
+      "Math"
+    ]
+  },
+  "path-sum": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "112-path-sum.cpp",
+    "qid": "112",
+    "timestamp": 1782353182,
+    "title": "Path Sum",
+    "topics": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ]
+  },
+  "product-of-array-except-self": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "238-product-of-array-except-self.cpp",
+    "qid": "238",
+    "timestamp": 1721477139,
+    "title": "Product of Array Except Self",
+    "topics": [
+      "Array",
+      "Prefix Sum"
+    ]
+  },
+  "remove-element": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "27-remove-element.cpp",
+    "qid": "27",
+    "timestamp": 1721831757,
+    "title": "Remove Element",
+    "topics": [
+      "Array",
+      "Two Pointers"
+    ]
+  },
+  "removing-stars-from-a-string": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "2390-removing-stars-from-a-string.cpp",
+    "qid": "2390",
+    "timestamp": 1720865206,
+    "title": "Removing Stars From a String",
+    "topics": [
+      "String",
+      "Stack",
+      "Simulation"
+    ]
+  },
+  "reverse-linked-list": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "206-reverse-linked-list.cpp",
+    "qid": "206",
+    "timestamp": 1721575005,
+    "title": "Reverse Linked List",
+    "topics": [
+      "Linked List",
+      "Recursion"
+    ]
+  },
+  "reverse-substrings-between-each-pair-of-parentheses": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "1190-reverse-substrings-between-each-pair-of-parentheses.cpp",
+    "qid": "1190",
+    "timestamp": 1720691792,
+    "title": "Reverse Substrings Between Each Pair of Parentheses",
+    "topics": [
+      "String",
+      "Stack"
+    ]
+  },
+  "reverse-vowels-of-a-string": {
+    "difficulty": "Easy",
+    "ext": "py",
+    "file": "345-reverse-vowels-of-a-string.py",
+    "qid": "345",
+    "timestamp": 1768004170,
+    "title": "Reverse Vowels of a String",
+    "topics": [
+      "Two Pointers",
+      "String"
+    ]
+  },
+  "reverse-words-in-a-string": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "151-reverse-words-in-a-string.cpp",
+    "qid": "151",
+    "timestamp": 1721306277,
+    "title": "Reverse Words in a String",
+    "topics": [
+      "Two Pointers",
+      "String"
+    ]
+  },
+  "roman-to-integer": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "13-roman-to-integer.cpp",
+    "qid": "13",
+    "timestamp": 1721918715,
+    "title": "Roman to Integer",
+    "topics": [
+      "Hash Table",
+      "Math",
+      "String"
+    ]
+  },
+  "rotate-image": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "48-rotate-image.cpp",
+    "qid": "48",
+    "timestamp": 1782480872,
+    "title": "Rotate Image",
+    "topics": [
+      "Array",
+      "Math",
+      "Matrix"
+    ]
+  },
+  "rotting-oranges": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "994-rotting-oranges.cpp",
+    "qid": "994",
+    "timestamp": 1782740134,
+    "title": "Rotting Oranges",
+    "topics": [
+      "Array",
+      "Breadth-First Search",
+      "Matrix"
+    ]
+  },
+  "same-tree": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "100-same-tree.cpp",
+    "qid": "100",
+    "timestamp": 1782399710,
+    "title": "Same Tree",
+    "topics": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ]
+  },
+  "search-in-rotated-sorted-array": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "33-search-in-rotated-sorted-array.cpp",
+    "qid": "33",
+    "timestamp": 1782662251,
+    "title": "Search in Rotated Sorted Array",
+    "topics": [
+      "Array",
+      "Binary Search"
+    ]
+  },
+  "set-matrix-zeroes": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "73-set-matrix-zeroes.cpp",
+    "qid": "73",
+    "timestamp": 1782485583,
+    "title": "Set Matrix Zeroes",
+    "topics": [
+      "Array",
+      "Hash Table",
+      "Matrix"
+    ]
+  },
+  "sliding-window-maximum": {
+    "difficulty": "Hard",
+    "ext": "cpp",
+    "file": "239-sliding-window-maximum.cpp",
+    "qid": "239",
+    "timestamp": 1782261464,
+    "title": "Sliding Window Maximum",
+    "topics": [
+      "Array",
+      "Queue",
+      "Sliding Window",
+      "Heap (Priority Queue)",
+      "Monotonic Queue"
+    ]
+  },
+  "sort-the-people": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "2418-sort-the-people.cpp",
+    "qid": "2418",
+    "timestamp": 1722955502,
+    "title": "Sort the People",
+    "topics": [
+      "Array",
+      "Hash Table",
+      "String",
+      "Sorting"
+    ]
+  },
+  "spiral-matrix": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "54-spiral-matrix.cpp",
+    "qid": "54",
+    "timestamp": 1782911225,
+    "title": "Spiral Matrix",
+    "topics": [
+      "Array",
+      "Matrix",
+      "Simulation"
+    ]
+  },
+  "spiral-matrix-ii": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "59-spiral-matrix-ii.cpp",
+    "qid": "59",
+    "timestamp": 1782916357,
+    "title": "Spiral Matrix II",
+    "topics": [
+      "Array",
+      "Matrix",
+      "Simulation"
+    ]
+  },
+  "spiral-matrix-iii": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "885-spiral-matrix-iii.cpp",
+    "qid": "885",
+    "timestamp": 1783004594,
+    "title": "Spiral Matrix III",
+    "topics": [
+      "Array",
+      "Matrix",
+      "Simulation"
+    ]
+  },
+  "spiral-matrix-iv": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "2326-spiral-matrix-iv.cpp",
+    "qid": "2326",
+    "timestamp": 1782999731,
+    "title": "Spiral Matrix IV",
+    "topics": [
+      "Array",
+      "Linked List",
+      "Matrix",
+      "Simulation"
+    ]
+  },
+  "subarray-sum-equals-k": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "560-subarray-sum-equals-k.cpp",
+    "qid": "560",
+    "timestamp": 1782761233,
+    "title": "Subarray Sum Equals K",
+    "topics": [
+      "Array",
+      "Hash Table",
+      "Prefix Sum"
+    ]
+  },
+  "sum-of-left-leaves": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "404-sum-of-left-leaves.cpp",
+    "qid": "404",
+    "timestamp": 1782350569,
+    "title": "Sum of Left Leaves",
+    "topics": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ]
+  },
+  "symmetric-tree": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "101-symmetric-tree.cpp",
+    "qid": "101",
+    "timestamp": 1782351596,
+    "title": "Symmetric Tree",
+    "topics": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ]
+  },
+  "the-kth-factor-of-n": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "1492-the-kth-factor-of-n.cpp",
+    "qid": "1492",
+    "timestamp": 1722610450,
+    "title": "The kth Factor of n",
+    "topics": [
+      "Math",
+      "Number Theory"
+    ]
+  },
+  "two-sum": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "1-two-sum.cpp",
+    "qid": "1",
+    "timestamp": 1782827257,
+    "title": "Two Sum",
+    "topics": [
+      "Array",
+      "Hash Table"
+    ]
+  },
+  "two-sum-ii-input-array-is-sorted": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "167-two-sum-ii-input-array-is-sorted.cpp",
+    "qid": "167",
+    "timestamp": 1782605032,
+    "title": "Two Sum II - Input Array Is Sorted",
+    "topics": [
+      "Array",
+      "Two Pointers",
+      "Binary Search"
+    ]
+  },
+  "valid-palindrome": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "125-valid-palindrome.cpp",
+    "qid": "125",
+    "timestamp": 1782828298,
+    "title": "Valid Palindrome",
+    "topics": [
+      "Two Pointers",
+      "String"
+    ]
+  }
+}
