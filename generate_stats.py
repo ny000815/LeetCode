@@ -7,16 +7,22 @@ renders a stats dashboard grouped by difficulty and topic.
 """
 import json
 import os
+import re
 import subprocess
 import time
-from collections import Counter
-from datetime import datetime, timezone
+from collections import Counter, defaultdict
+from datetime import datetime, timedelta, timezone
 
 from leetcode_api import graphql_post, make_session, slug_of
 
 SUBMISSIONS_DIR = "submissions"
 CACHE_PATH = os.path.join("data", "problems.json")
 STATS_PATH = "STATS.md"
+README_PATH = "README.md"
+
+# README section that generate_stats.py owns and rewrites in place.
+README_START = "<!-- STATS:START -->"
+README_END = "<!-- STATS:END -->"
 
 DIFFICULTY_ORDER = ["Easy", "Medium", "Hard"]
 
@@ -30,6 +36,26 @@ query getQuestion($titleSlug: String!) {
       name
     }
   }
+}
+"""
+
+USERNAME_QUERY = "query { userStatus { username } }"
+
+PROFILE_QUERY = """
+query userProfile($username: String!) {
+  matchedUser(username: $username) {
+    username
+    profile {
+      realName
+      userAvatar
+      ranking
+    }
+    submitStatsGlobal {
+      acSubmissionNum { difficulty count }
+      totalSubmissionNum { difficulty count }
+    }
+  }
+  allQuestionsCount { difficulty count }
 }
 """
 
@@ -118,6 +144,115 @@ def build_cache(session_obj):
     return cache
 
 
+def _get_username(session_obj):
+    env_name = os.environ.get("LEETCODE_USERNAME")
+    if env_name:
+        return env_name
+    try:
+        _, data = graphql_post(session_obj, USERNAME_QUERY, {})
+        return ((data or {}).get("data", {}).get("userStatus") or {}).get("username")
+    except Exception:
+        return None
+
+
+def fetch_profile(session_obj):
+    """Fetch profile-level stats (ranking, per-difficulty solved/total).
+
+    Returns a dict, or None on any failure so the rest of the dashboard still
+    renders (graceful degradation)."""
+    username = _get_username(session_obj)
+    if not username:
+        print("  WARN: could not determine LeetCode username; skipping profile.")
+        return None
+    try:
+        _, data = graphql_post(session_obj, PROFILE_QUERY, {"username": username})
+    except Exception as e:
+        print(f"  WARN: profile fetch failed ({e}); skipping profile.")
+        return None
+
+    root = (data or {}).get("data", {})
+    user = root.get("matchedUser")
+    if not user:
+        print(f"  WARN: no matchedUser for '{username}'; skipping profile.")
+        return None
+
+    def by_diff(nums):
+        return {n["difficulty"]: n["count"] for n in (nums or [])}
+
+    stats = user.get("submitStatsGlobal") or {}
+    ac = by_diff(stats.get("acSubmissionNum"))
+    tot_sub = by_diff(stats.get("totalSubmissionNum"))
+    all_counts = by_diff(root.get("allQuestionsCount"))
+    profile = user.get("profile") or {}
+
+    ac_all = ac.get("All", 0)
+    sub_all = tot_sub.get("All", 0)
+    acceptance = (100.0 * ac_all / sub_all) if sub_all else None
+
+    return {
+        "username": user.get("username", username),
+        "realName": profile.get("realName"),
+        "avatar": profile.get("userAvatar"),
+        "ranking": profile.get("ranking"),
+        "solved": ac,       # {Easy, Medium, Hard, All}
+        "total": all_counts,  # {Easy, Medium, Hard, All}
+        "acceptanceRate": acceptance,
+    }
+
+
+def _solve_dates(cache):
+    """Set of distinct UTC solve dates (as date objects)."""
+    dates = set()
+    for p in cache.values():
+        ts = int(p.get("timestamp", 0) or 0)
+        if ts:
+            dates.add(datetime.fromtimestamp(ts, timezone.utc).date())
+    return dates
+
+
+def compute_streaks(cache):
+    """Return (current_streak, longest_streak) in days from solve dates.
+
+    Multiple solves on the same day count once. The current streak counts
+    consecutive days ending today or yesterday (UTC)."""
+    dates = sorted(_solve_dates(cache))
+    if not dates:
+        return 0, 0
+
+    longest = run = 1
+    for prev, cur in zip(dates, dates[1:]):
+        run = run + 1 if (cur - prev) == timedelta(days=1) else 1
+        longest = max(longest, run)
+
+    today = datetime.now(timezone.utc).date()
+    date_set = set(dates)
+    current = 0
+    if today in date_set or (today - timedelta(days=1)) in date_set:
+        cursor = today if today in date_set else today - timedelta(days=1)
+        while cursor in date_set:
+            current += 1
+            cursor -= timedelta(days=1)
+    return current, longest
+
+
+def compute_monthly_pace(cache):
+    """Return [(YYYY-MM, count), ...] sorted ascending by month."""
+    counts = defaultdict(int)
+    for p in cache.values():
+        ts = int(p.get("timestamp", 0) or 0)
+        if ts:
+            month = datetime.fromtimestamp(ts, timezone.utc).strftime("%Y-%m")
+            counts[month] += 1
+    return sorted(counts.items())
+
+
+def recent_solves(cache, n=10):
+    """Return the n most recently solved problems (newest first)."""
+    return sorted(
+        cache.values(), key=lambda p: int(p.get("timestamp", 0) or 0), reverse=True
+    )[:n]
+
+
 def _bar(count, total, width=20):
     if total == 0:
         return ""
@@ -125,7 +260,105 @@ def _bar(count, total, width=20):
     return "█" * filled + "░" * (width - filled)
 
 
-def render_stats(cache):
+def _profile_card(profile, total_solved):
+    """Render a compact profile-card header. Returns a list of md lines."""
+    lines = []
+    if not profile:
+        lines.append(f"**Total solved: {total_solved}**")
+        lines.append("")
+        return lines
+
+    name = profile.get("username") or "LeetCode"
+    ranking = profile.get("ranking")
+    avatar = profile.get("avatar")
+    header = f"### 👤 {name}"
+    if ranking:
+        header += f" &nbsp;·&nbsp; 🏆 Global ranking **#{ranking:,}**"
+    lines.append(header)
+    lines.append("")
+
+    # Per-difficulty coverage table: solved / total (pct)
+    solved = profile.get("solved", {})
+    totals = profile.get("total", {})
+    header_cells = ["**Solved**"]
+    value_cells = [f"**{total_solved}**"]
+    for diff in DIFFICULTY_ORDER:
+        s = solved.get(diff, 0)
+        t = totals.get(diff, 0)
+        pct = f"{100.0 * s / t:.1f}%" if t else "—"
+        header_cells.append(diff)
+        value_cells.append(f"{s}/{t} ({pct})")
+    lines.append("| " + " | ".join(header_cells) + " |")
+    lines.append("| " + " | ".join(["---"] * len(header_cells)) + " |")
+    lines.append("| " + " | ".join(value_cells) + " |")
+    lines.append("")
+    if profile.get("acceptanceRate") is not None:
+        lines.append(f"_Acceptance rate: {profile['acceptanceRate']:.1f}%_")
+        lines.append("")
+    if avatar:
+        # Small avatar, right after the card, kept unobtrusive.
+        lines.append(f'<img src="{avatar}" width="64" align="right" alt="avatar" />')
+        lines.append("")
+    return lines
+
+
+def render_readme_summary(cache, profile):
+    """Compact block embedded between the README STATS markers."""
+    problems = list(cache.values())
+    total = len(problems)
+    lang_counts = Counter(p.get("ext", "?") for p in problems)
+    topic_counts = Counter(t for p in problems for t in p.get("topics", []))
+    current, longest = compute_streaks(cache)
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+    lines = ["## 📊 LeetCode Stats", ""]
+    lines += _profile_card(profile, total)
+    lines.append(
+        f"🔥 **Current streak:** {current} day(s) &nbsp;·&nbsp; "
+        f"**Longest:** {longest} day(s)"
+    )
+    lines.append("")
+
+    top_langs = ", ".join(f"`{e}` {c}" for e, c in lang_counts.most_common(3))
+    if top_langs:
+        lines.append(f"**Top languages:** {top_langs}")
+        lines.append("")
+    top_topics = " · ".join(f"{t} ({c})" for t, c in topic_counts.most_common(8))
+    if top_topics:
+        lines.append(f"**Top topics:** {top_topics}")
+        lines.append("")
+
+    lines.append(f"➡️ Full dashboard: **[STATS.md](STATS.md)** _(updated {now})_")
+    return "\n".join(lines).strip()
+
+
+def inject_into_readme(summary):
+    """Replace the content between the README markers with `summary`."""
+    if not os.path.exists(README_PATH):
+        print(f"  WARN: {README_PATH} not found; skipping README embed.")
+        return
+    with open(README_PATH, encoding="utf-8") as f:
+        content = f.read()
+    if README_START not in content or README_END not in content:
+        print(
+            f"  WARN: markers {README_START}/{README_END} not found in "
+            f"{README_PATH}; skipping README embed."
+        )
+        return
+    block = f"{README_START}\n{summary}\n{README_END}"
+    new_content = re.sub(
+        re.escape(README_START) + r".*?" + re.escape(README_END),
+        lambda _: block,
+        content,
+        flags=re.DOTALL,
+    )
+    if new_content != content:
+        with open(README_PATH, "w", encoding="utf-8") as f:
+            f.write(new_content)
+        print(f"Updated {README_PATH} stats section.")
+
+
+def render_stats(cache, profile=None):
     """Pure function: turn the metadata cache into STATS.md markdown."""
     problems = sorted(cache.values(), key=lambda p: int(p.get("qid") or 0) or 0)
     total = len(problems)
@@ -137,12 +370,21 @@ def render_stats(cache):
     )
 
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    current, longest = compute_streaks(cache)
     lines = []
     lines.append("# 📊 LeetCode Stats")
     lines.append("")
     lines.append(f"_Auto-generated by `generate_stats.py` — last updated {now}._")
     lines.append("")
-    lines.append(f"**Total solved: {total}**")
+
+    # Profile card (solved counts + per-difficulty coverage)
+    lines += _profile_card(profile, total)
+
+    # Streak
+    lines.append(
+        f"🔥 **Current streak:** {current} day(s) &nbsp;·&nbsp; "
+        f"**Longest streak:** {longest} day(s)"
+    )
     lines.append("")
 
     # By difficulty
@@ -176,6 +418,36 @@ def render_stats(cache):
         lines.append(f"| {topic} | {c} |")
     lines.append("")
 
+    # Monthly pace
+    pace = compute_monthly_pace(cache)
+    if pace:
+        peak = max(c for _, c in pace)
+        lines.append("## Activity (solves per month)")
+        lines.append("")
+        lines.append("```")
+        for month, c in pace:
+            bar = "█" * round(20 * c / peak) if peak else ""
+            lines.append(f"{month}  {bar} {c}")
+        lines.append("```")
+        lines.append("")
+
+    # Recently solved
+    recent = recent_solves(cache, 10)
+    if recent:
+        lines.append("## Recently solved")
+        lines.append("")
+        lines.append("| # | Problem | Difficulty | Solved |")
+        lines.append("| ---: | --- | --- | --- |")
+        for p in recent:
+            date = datetime.fromtimestamp(
+                int(p.get("timestamp", 0) or 0), timezone.utc
+            ).strftime("%Y-%m-%d")
+            link = f"[{p.get('title', p['file'])}]({SUBMISSIONS_DIR}/{p['file']})"
+            lines.append(
+                f"| {p.get('qid', '')} | {link} | {p.get('difficulty', '')} | {date} |"
+            )
+        lines.append("")
+
     # Full list grouped by difficulty
     lines.append("## Solved problems")
     lines.append("")
@@ -206,9 +478,11 @@ def render_stats(cache):
 def main():
     session_obj = make_session()
     cache = build_cache(session_obj)
+    profile = fetch_profile(session_obj)
     save_cache(cache)
     with open(STATS_PATH, "w", encoding="utf-8") as f:
-        f.write(render_stats(cache))
+        f.write(render_stats(cache, profile))
+    inject_into_readme(render_readme_summary(cache, profile))
     print(f"Wrote {STATS_PATH} ({len(cache)} problems) and {CACHE_PATH}.")
 
 

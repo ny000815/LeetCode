@@ -42,7 +42,7 @@ jobs:
           LEETCODE_CSRF_TOKEN: ${{ secrets.LEETCODE_CSRF_TOKEN }}
         run: |
           python generate_stats.py
-          git add STATS.md data/problems.json
+          git add STATS.md data/problems.json README.md
           if ! git diff --staged --quiet; then
             git commit -m "Update stats dashboard"
           fi
