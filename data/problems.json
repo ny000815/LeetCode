@@ -222,6 +222,20 @@
       "Prefix Sum"
     ]
   },
+  "flood-fill": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "733-flood-fill.cpp",
+    "qid": "733",
+    "timestamp": 1784042606,
+    "title": "Flood Fill",
+    "topics": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Matrix"
+    ]
+  },
   "game-of-life": {
     "difficulty": "Medium",
     "ext": "cpp",
@@ -245,6 +259,20 @@
     "topics": [
       "Math",
       "String"
+    ]
+  },
+  "group-anagrams": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "49-group-anagrams.cpp",
+    "qid": "49",
+    "timestamp": 1784056949,
+    "title": "Group Anagrams",
+    "topics": [
+      "Array",
+      "Hash Table",
+      "String",
+      "Sorting"
     ]
   },
   "increasing-triplet-subsequence": {
@@ -370,6 +398,18 @@
       "Array",
       "Stack",
       "Monotonic Stack"
+    ]
+  },
+  "last-stone-weight": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "1046-last-stone-weight.cpp",
+    "qid": "1046",
+    "timestamp": 1784039107,
+    "title": "Last Stone Weight",
+    "topics": [
+      "Array",
+      "Heap (Priority Queue)"
     ]
   },
   "letter-combinations-of-a-phone-number": {
