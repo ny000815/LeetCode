@@ -2,23 +2,23 @@ class Solution {
 public:
     vector<vector<string>> groupAnagrams(vector<string>& strs) {
         vector<vector<string>> result;
-        unordered_map<string, vector<string>> anagrams;
-        for(int i = 0; i < strs.size(); ++i) {
-            array<int, 26> count = {};
-            for(int j = 0; j < strs[i].size(); ++j) {
-                char c = strs[i][j];
-                count[c - 'a']++;
+        unordered_map<string, vector<string>> seen;
+        const int n = strs.size();
+        seen.reserve(n);
+        
+        for(int i = 0; i < n; ++i) {
+            int count[26] = {0};
+            int const len = strs[i].size();
+            for(int j = 0; j < len; ++j) {
+                ++count[strs[i][j]-'a'];
             }
-            string key;
-            for (int k = 0; k < 26; ++k) {
-                key += to_string(count[k]);
-                key += '#';
+            string key = "";
+            for(int j = 0; j < 26; ++j){
+                key += to_string(count[j])+'#';
             }
-            anagrams[key].push_back(strs[i]);
+            seen[key].push_back(strs[i]);
         }
-        for (auto& [key, value] : anagrams) {
-            result.push_back(value);
-        }
+        for(auto &[key, value] : seen) result.push_back(move(value));
         return result;
     }
 };
