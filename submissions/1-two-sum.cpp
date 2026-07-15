@@ -3,12 +3,10 @@ public:
     vector<int> twoSum(vector<int>& nums, int target) {
         unordered_map<int, int> seen;
         for(int i = 0; i < nums.size(); ++i) {
-            if (seen.find(target-nums[i]) != seen.end()) {
-                return {seen[target-nums[i]], i};
-            }
-            seen[nums[i]] = i;
+            auto it = seen.find(target-nums[i]);
+            if (it != seen.end()) return {it->second, i};
+            else seen[nums[i]] = i;
         }
-        vector<int> a;
-        return a;
+        return {};
     }
 };
