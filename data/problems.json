@@ -120,10 +120,10 @@
   },
   "contains-duplicate": {
     "difficulty": "Easy",
-    "ext": "java",
-    "file": "217-contains-duplicate.java",
+    "ext": "cpp",
+    "file": "217-contains-duplicate.cpp",
     "qid": "217",
-    "timestamp": 1780709222,
+    "timestamp": 1784138756,
     "title": "Contains Duplicate",
     "topics": [
       "Array",
@@ -266,7 +266,7 @@
     "ext": "cpp",
     "file": "49-group-anagrams.cpp",
     "qid": "49",
-    "timestamp": 1784056949,
+    "timestamp": 1784142131,
     "title": "Group Anagrams",
     "topics": [
       "Array",
@@ -1001,12 +1001,30 @@
       "Number Theory"
     ]
   },
+  "top-k-frequent-elements": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "347-top-k-frequent-elements.cpp",
+    "qid": "347",
+    "timestamp": 1784145793,
+    "title": "Top K Frequent Elements",
+    "topics": [
+      "Array",
+      "Hash Table",
+      "Divide and Conquer",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Bucket Sort",
+      "Counting",
+      "Quickselect"
+    ]
+  },
   "two-sum": {
     "difficulty": "Easy",
     "ext": "cpp",
     "file": "1-two-sum.cpp",
     "qid": "1",
-    "timestamp": 1782827257,
+    "timestamp": 1784137532,
     "title": "Two Sum",
     "topics": [
       "Array",
@@ -1024,6 +1042,19 @@
       "Array",
       "Two Pointers",
       "Binary Search"
+    ]
+  },
+  "valid-anagram": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "242-valid-anagram.cpp",
+    "qid": "242",
+    "timestamp": 1784139649,
+    "title": "Valid Anagram",
+    "topics": [
+      "Hash Table",
+      "String",
+      "Sorting"
     ]
   },
   "valid-palindrome": {
