@@ -1,10 +1,10 @@
 {
   "3sum": {
     "difficulty": "Medium",
-    "ext": "java",
-    "file": "15-3sum.java",
+    "ext": "cpp",
+    "file": "15-3sum.cpp",
     "qid": "15",
-    "timestamp": 1781922925,
+    "timestamp": 1784249874,
     "title": "3Sum",
     "topics": [
       "Array",
@@ -120,10 +120,10 @@
   },
   "contains-duplicate": {
     "difficulty": "Easy",
-    "ext": "cpp",
-    "file": "217-contains-duplicate.cpp",
+    "ext": "java",
+    "file": "217-contains-duplicate.java",
     "qid": "217",
-    "timestamp": 1784138756,
+    "timestamp": 1780709222,
     "title": "Contains Duplicate",
     "topics": [
       "Array",
@@ -452,6 +452,19 @@
       "Trie"
     ]
   },
+  "longest-consecutive-sequence": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "128-longest-consecutive-sequence.cpp",
+    "qid": "128",
+    "timestamp": 1784227798,
+    "title": "Longest Consecutive Sequence",
+    "topics": [
+      "Array",
+      "Hash Table",
+      "Union-Find"
+    ]
+  },
   "longest-repeating-character-replacement": {
     "difficulty": "Medium",
     "ext": "py",
@@ -708,7 +721,7 @@
     "ext": "cpp",
     "file": "238-product-of-array-except-self.cpp",
     "qid": "238",
-    "timestamp": 1721477139,
+    "timestamp": 1784225120,
     "title": "Product of Array Except Self",
     "topics": [
       "Array",
@@ -1067,6 +1080,18 @@
     "topics": [
       "Two Pointers",
       "String"
+    ]
+  },
+  "valid-parentheses": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "20-valid-parentheses.cpp",
+    "qid": "20",
+    "timestamp": 1784229627,
+    "title": "Valid Parentheses",
+    "topics": [
+      "String",
+      "Stack"
     ]
   }
 }
