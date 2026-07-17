@@ -1,10 +1,10 @@
 {
   "3sum": {
     "difficulty": "Medium",
-    "ext": "cpp",
-    "file": "15-3sum.cpp",
+    "ext": "java",
+    "file": "15-3sum.java",
     "qid": "15",
-    "timestamp": 1784249874,
+    "timestamp": 1781922925,
     "title": "3Sum",
     "topics": [
       "Array",
