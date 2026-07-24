@@ -349,6 +349,20 @@
       "Sweep Line"
     ]
   },
+  "invert-binary-tree": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "226-invert-binary-tree.cpp",
+    "qid": "226",
+    "timestamp": 1784850791,
+    "title": "Invert Binary Tree",
+    "topics": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ]
+  },
   "is-subsequence": {
     "difficulty": "Easy",
     "ext": "cpp",
@@ -479,10 +493,10 @@
   },
   "longest-repeating-character-replacement": {
     "difficulty": "Medium",
-    "ext": "py",
-    "file": "424-longest-repeating-character-replacement.py",
+    "ext": "cpp",
+    "file": "424-longest-repeating-character-replacement.cpp",
     "qid": "424",
-    "timestamp": 1781810323,
+    "timestamp": 1784836221,
     "title": "Longest Repeating Character Replacement",
     "topics": [
       "Hash Table",
