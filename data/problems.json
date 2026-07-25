@@ -120,10 +120,10 @@
   },
   "contains-duplicate": {
     "difficulty": "Easy",
-    "ext": "java",
-    "file": "217-contains-duplicate.java",
+    "ext": "cpp",
+    "file": "217-contains-duplicate.cpp",
     "qid": "217",
-    "timestamp": 1780709222,
+    "timestamp": 1784918885,
     "title": "Contains Duplicate",
     "topics": [
       "Array",
@@ -493,10 +493,10 @@
   },
   "longest-repeating-character-replacement": {
     "difficulty": "Medium",
-    "ext": "cpp",
-    "file": "424-longest-repeating-character-replacement.cpp",
+    "ext": "py",
+    "file": "424-longest-repeating-character-replacement.py",
     "qid": "424",
-    "timestamp": 1784836221,
+    "timestamp": 1781810323,
     "title": "Longest Repeating Character Replacement",
     "topics": [
       "Hash Table",
@@ -547,10 +547,10 @@
   },
   "maximum-depth-of-binary-tree": {
     "difficulty": "Easy",
-    "ext": "py",
-    "file": "104-maximum-depth-of-binary-tree.py",
+    "ext": "cpp",
+    "file": "104-maximum-depth-of-binary-tree.cpp",
     "qid": "104",
-    "timestamp": 1768550026,
+    "timestamp": 1784904162,
     "title": "Maximum Depth of Binary Tree",
     "topics": [
       "Tree",
@@ -1012,6 +1012,21 @@
       "Array",
       "Hash Table",
       "Prefix Sum"
+    ]
+  },
+  "subtree-of-another-tree": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "572-subtree-of-another-tree.cpp",
+    "qid": "572",
+    "timestamp": 1784917937,
+    "title": "Subtree of Another Tree",
+    "topics": [
+      "Tree",
+      "Depth-First Search",
+      "String Matching",
+      "Binary Tree",
+      "Hash Function"
     ]
   },
   "sum-of-left-leaves": {
