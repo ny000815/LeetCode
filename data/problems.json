@@ -120,10 +120,10 @@
   },
   "contains-duplicate": {
     "difficulty": "Easy",
-    "ext": "cpp",
-    "file": "217-contains-duplicate.cpp",
+    "ext": "java",
+    "file": "217-contains-duplicate.java",
     "qid": "217",
-    "timestamp": 1784918885,
+    "timestamp": 1780709222,
     "title": "Contains Duplicate",
     "topics": [
       "Array",
@@ -547,10 +547,10 @@
   },
   "maximum-depth-of-binary-tree": {
     "difficulty": "Easy",
-    "ext": "cpp",
-    "file": "104-maximum-depth-of-binary-tree.cpp",
+    "ext": "py",
+    "file": "104-maximum-depth-of-binary-tree.py",
     "qid": "104",
-    "timestamp": 1784904162,
+    "timestamp": 1768550026,
     "title": "Maximum Depth of Binary Tree",
     "topics": [
       "Tree",
