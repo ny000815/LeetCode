@@ -38,6 +38,19 @@
       "Simulation"
     ]
   },
+  "balanced-binary-tree": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "110-balanced-binary-tree.cpp",
+    "qid": "110",
+    "timestamp": 1785073988,
+    "title": "Balanced Binary Tree",
+    "topics": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ]
+  },
   "best-time-to-buy-and-sell-stock": {
     "difficulty": "Easy",
     "ext": "cpp",
@@ -48,6 +61,18 @@
     "topics": [
       "Array",
       "Dynamic Programming"
+    ]
+  },
+  "binary-search": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "704-binary-search.cpp",
+    "qid": "704",
+    "timestamp": 1785070975,
+    "title": "Binary Search",
+    "topics": [
+      "Array",
+      "Binary Search"
     ]
   },
   "boats-to-save-people": {
@@ -413,6 +438,22 @@
       "Counting"
     ]
   },
+  "kth-largest-element-in-a-stream": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "703-kth-largest-element-in-a-stream.cpp",
+    "qid": "703",
+    "timestamp": 1785076985,
+    "title": "Kth Largest Element in a Stream",
+    "topics": [
+      "Tree",
+      "Design",
+      "Binary Search Tree",
+      "Heap (Priority Queue)",
+      "Binary Tree",
+      "Data Stream"
+    ]
+  },
   "largest-rectangle-in-histogram": {
     "difficulty": "Hard",
     "ext": "cpp",
@@ -606,6 +647,18 @@
     "topics": [
       "Linked List",
       "Recursion"
+    ]
+  },
+  "min-cost-climbing-stairs": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "746-min-cost-climbing-stairs.cpp",
+    "qid": "746",
+    "timestamp": 1785080251,
+    "title": "Min Cost Climbing Stairs",
+    "topics": [
+      "Array",
+      "Dynamic Programming"
     ]
   },
   "minimum-size-subarray-sum": {
