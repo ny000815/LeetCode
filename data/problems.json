@@ -716,6 +716,18 @@
       "Sorting"
     ]
   },
+  "number-of-1-bits": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "191-number-of-1-bits.cpp",
+    "qid": "191",
+    "timestamp": 1785160240,
+    "title": "Number of 1 Bits",
+    "topics": [
+      "Divide and Conquer",
+      "Bit Manipulation"
+    ]
+  },
   "number-of-islands": {
     "difficulty": "Medium",
     "ext": "cpp",
@@ -970,6 +982,18 @@
       "Array",
       "Hash Table",
       "Matrix"
+    ]
+  },
+  "single-number": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "136-single-number.cpp",
+    "qid": "136",
+    "timestamp": 1785157674,
+    "title": "Single Number",
+    "topics": [
+      "Array",
+      "Bit Manipulation"
     ]
   },
   "sliding-window-maximum": {
