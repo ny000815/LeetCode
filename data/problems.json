@@ -678,12 +678,25 @@
       "Sorting"
     ]
   },
-  "merge-strings-alternately": {
+  "merge-sorted-array": {
     "difficulty": "Easy",
     "ext": "cpp",
-    "file": "1768-merge-strings-alternately.cpp",
+    "file": "88-merge-sorted-array.cpp",
+    "qid": "88",
+    "timestamp": 1785443279,
+    "title": "Merge Sorted Array",
+    "topics": [
+      "Array",
+      "Two Pointers",
+      "Sorting"
+    ]
+  },
+  "merge-strings-alternately": {
+    "difficulty": "Easy",
+    "ext": "py",
+    "file": "1768-merge-strings-alternately.py",
     "qid": "1768",
-    "timestamp": 1785377449,
+    "timestamp": 1767927389,
     "title": "Merge Strings Alternately",
     "topics": [
       "Two Pointers",
