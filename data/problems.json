@@ -51,6 +51,19 @@
       "Binary Tree"
     ]
   },
+  "baseball-game": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "682-baseball-game.cpp",
+    "qid": "682",
+    "timestamp": 1785374593,
+    "title": "Baseball Game",
+    "topics": [
+      "Array",
+      "Stack",
+      "Simulation"
+    ]
+  },
   "best-time-to-buy-and-sell-stock": {
     "difficulty": "Easy",
     "ext": "cpp",
@@ -130,6 +143,18 @@
       "Breadth-First Search"
     ]
   },
+  "concatenation-of-array": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "1929-concatenation-of-array.cpp",
+    "qid": "1929",
+    "timestamp": 1785344655,
+    "title": "Concatenation of Array",
+    "topics": [
+      "Array",
+      "Simulation"
+    ]
+  },
   "container-with-most-water": {
     "difficulty": "Medium",
     "ext": "cpp",
@@ -203,6 +228,21 @@
     "qid": "706",
     "timestamp": 1782145105,
     "title": "Design HashMap",
+    "topics": [
+      "Array",
+      "Hash Table",
+      "Linked List",
+      "Design",
+      "Hash Function"
+    ]
+  },
+  "design-hashset": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "705-design-hashset.cpp",
+    "qid": "705",
+    "timestamp": 1785357180,
+    "title": "Design HashSet",
     "topics": [
       "Array",
       "Hash Table",
@@ -524,7 +564,7 @@
     "ext": "cpp",
     "file": "14-longest-common-prefix.cpp",
     "qid": "14",
-    "timestamp": 1735853763,
+    "timestamp": 1785344054,
     "title": "Longest Common Prefix",
     "topics": [
       "Array",
@@ -640,10 +680,10 @@
   },
   "merge-strings-alternately": {
     "difficulty": "Easy",
-    "ext": "py",
-    "file": "1768-merge-strings-alternately.py",
+    "ext": "cpp",
+    "file": "1768-merge-strings-alternately.cpp",
     "qid": "1768",
-    "timestamp": 1767927389,
+    "timestamp": 1785377449,
     "title": "Merge Strings Alternately",
     "topics": [
       "Two Pointers",
@@ -844,6 +884,18 @@
       "Prefix Sum"
     ]
   },
+  "remove-duplicates-from-sorted-array": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "26-remove-duplicates-from-sorted-array.cpp",
+    "qid": "26",
+    "timestamp": 1785379300,
+    "title": "Remove Duplicates from Sorted Array",
+    "topics": [
+      "Array",
+      "Two Pointers"
+    ]
+  },
   "remove-element": {
     "difficulty": "Easy",
     "ext": "cpp",
@@ -893,6 +945,18 @@
     "topics": [
       "Linked List",
       "Recursion"
+    ]
+  },
+  "reverse-string": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "344-reverse-string.cpp",
+    "qid": "344",
+    "timestamp": 1785374695,
+    "title": "Reverse String",
+    "topics": [
+      "Two Pointers",
+      "String"
     ]
   },
   "reverse-substrings-between-each-pair-of-parentheses": {
