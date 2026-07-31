@@ -181,6 +181,19 @@
       "Sorting"
     ]
   },
+  "contains-duplicate-ii": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "219-contains-duplicate-ii.cpp",
+    "qid": "219",
+    "timestamp": 1785445871,
+    "title": "Contains Duplicate II",
+    "topics": [
+      "Array",
+      "Hash Table",
+      "Sliding Window"
+    ]
+  },
   "course-schedule": {
     "difficulty": "Medium",
     "ext": "cpp",
@@ -352,6 +365,18 @@
       "Sorting"
     ]
   },
+  "guess-number-higher-or-lower": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "374-guess-number-higher-or-lower.cpp",
+    "qid": "374",
+    "timestamp": 1785464606,
+    "title": "Guess Number Higher or Lower",
+    "topics": [
+      "Binary Search",
+      "Interactive"
+    ]
+  },
   "happy-number": {
     "difficulty": "Easy",
     "ext": "cpp",
@@ -363,6 +388,32 @@
       "Hash Table",
       "Math",
       "Two Pointers"
+    ]
+  },
+  "implement-queue-using-stacks": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "232-implement-queue-using-stacks.cpp",
+    "qid": "232",
+    "timestamp": 1785449530,
+    "title": "Implement Queue using Stacks",
+    "topics": [
+      "Stack",
+      "Design",
+      "Queue"
+    ]
+  },
+  "implement-stack-using-queues": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "225-implement-stack-using-queues.cpp",
+    "qid": "225",
+    "timestamp": 1785448290,
+    "title": "Implement Stack using Queues",
+    "topics": [
+      "Stack",
+      "Design",
+      "Queue"
     ]
   },
   "increasing-triplet-subsequence": {
@@ -1073,6 +1124,18 @@
       "Binary Search"
     ]
   },
+  "search-insert-position": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "35-search-insert-position.cpp",
+    "qid": "35",
+    "timestamp": 1785463900,
+    "title": "Search Insert Position",
+    "topics": [
+      "Array",
+      "Binary Search"
+    ]
+  },
   "set-matrix-zeroes": {
     "difficulty": "Medium",
     "ext": "cpp",
@@ -1178,6 +1241,18 @@
       "Linked List",
       "Matrix",
       "Simulation"
+    ]
+  },
+  "sqrtx": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "69-sqrtx.cpp",
+    "qid": "69",
+    "timestamp": 1785465589,
+    "title": "Sqrt(x)",
+    "topics": [
+      "Math",
+      "Binary Search"
     ]
   },
   "subarray-sum-equals-k": {
