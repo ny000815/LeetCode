@@ -88,6 +88,20 @@
       "Binary Search"
     ]
   },
+  "binary-tree-inorder-traversal": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "94-binary-tree-inorder-traversal.cpp",
+    "qid": "94",
+    "timestamp": 1785700301,
+    "title": "Binary Tree Inorder Traversal",
+    "topics": [
+      "Stack",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ]
+  },
   "boats-to-save-people": {
     "difficulty": "Medium",
     "ext": "cpp",
