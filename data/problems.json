@@ -162,7 +162,7 @@
     "ext": "cpp",
     "file": "1929-concatenation-of-array.cpp",
     "qid": "1929",
-    "timestamp": 1785344655,
+    "timestamp": 1786473918,
     "title": "Concatenation of Array",
     "topics": [
       "Array",
@@ -962,6 +962,17 @@
       "Prefix Sum"
     ]
   },
+  "rearrange-spaces-between-words": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "1592-rearrange-spaces-between-words.cpp",
+    "qid": "1592",
+    "timestamp": 1786478212,
+    "title": "Rearrange Spaces Between Words",
+    "topics": [
+      "String"
+    ]
+  },
   "remove-duplicates-from-sorted-array": {
     "difficulty": "Easy",
     "ext": "cpp",
@@ -1110,6 +1121,18 @@
       "Array",
       "Breadth-First Search",
       "Matrix"
+    ]
+  },
+  "running-sum-of-1d-array": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "1480-running-sum-of-1d-array.cpp",
+    "qid": "1480",
+    "timestamp": 1786475029,
+    "title": "Running Sum of 1d Array",
+    "topics": [
+      "Array",
+      "Prefix Sum"
     ]
   },
   "same-tree": {
@@ -1280,6 +1303,17 @@
       "Array",
       "Hash Table",
       "Prefix Sum"
+    ]
+  },
+  "subtract-the-product-and-sum-of-digits-of-an-integer": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "1281-subtract-the-product-and-sum-of-digits-of-an-integer.cpp",
+    "qid": "1281",
+    "timestamp": 1786475559,
+    "title": "Subtract the Product and Sum of Digits of an Integer",
+    "topics": [
+      "Math"
     ]
   },
   "subtree-of-another-tree": {
