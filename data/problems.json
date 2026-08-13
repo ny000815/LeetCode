@@ -290,6 +290,20 @@
       "Design"
     ]
   },
+  "find-and-replace-in-string": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "833-find-and-replace-in-string.cpp",
+    "qid": "833",
+    "timestamp": 1786575839,
+    "title": "Find And Replace in String",
+    "topics": [
+      "Array",
+      "Hash Table",
+      "String",
+      "Sorting"
+    ]
+  },
   "find-minimum-in-rotated-sorted-array": {
     "difficulty": "Medium",
     "ext": "cpp",
