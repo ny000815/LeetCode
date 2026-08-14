@@ -25,6 +25,17 @@
       "Recursion"
     ]
   },
+  "apply-discount-to-prices": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "2288-apply-discount-to-prices.cpp",
+    "qid": "2288",
+    "timestamp": 1786644871,
+    "title": "Apply Discount to Prices",
+    "topics": [
+      "String"
+    ]
+  },
   "asteroid-collision": {
     "difficulty": "Medium",
     "ext": "cpp",
@@ -290,12 +301,25 @@
       "Design"
     ]
   },
+  "find-all-anagrams-in-a-string": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "438-find-all-anagrams-in-a-string.cpp",
+    "qid": "438",
+    "timestamp": 1786655519,
+    "title": "Find All Anagrams in a String",
+    "topics": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ]
+  },
   "find-and-replace-in-string": {
     "difficulty": "Medium",
     "ext": "cpp",
     "file": "833-find-and-replace-in-string.cpp",
     "qid": "833",
-    "timestamp": 1786575839,
+    "timestamp": 1786630806,
     "title": "Find And Replace in String",
     "topics": [
       "Array",
@@ -1304,6 +1328,18 @@
     "topics": [
       "Math",
       "Binary Search"
+    ]
+  },
+  "string-compression": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "443-string-compression.cpp",
+    "qid": "443",
+    "timestamp": 1786652967,
+    "title": "String Compression",
+    "topics": [
+      "Two Pointers",
+      "String"
     ]
   },
   "subarray-sum-equals-k": {
