@@ -12,6 +12,18 @@
       "Sorting"
     ]
   },
+  "4sum-ii": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "454-4sum-ii.cpp",
+    "qid": "454",
+    "timestamp": 1786738495,
+    "title": "4Sum II",
+    "topics": [
+      "Array",
+      "Hash Table"
+    ]
+  },
   "add-two-numbers": {
     "difficulty": "Medium",
     "ext": "cpp",
@@ -299,6 +311,20 @@
     "topics": [
       "Linked List",
       "Design"
+    ]
+  },
+  "equal-row-and-column-pairs": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "2352-equal-row-and-column-pairs.cpp",
+    "qid": "2352",
+    "timestamp": 1786723147,
+    "title": "Equal Row and Column Pairs",
+    "topics": [
+      "Array",
+      "Hash Table",
+      "Matrix",
+      "Simulation"
     ]
   },
   "find-all-anagrams-in-a-string": {
@@ -951,6 +977,19 @@
       "Data Stream"
     ]
   },
+  "pairs-of-songs-with-total-durations-divisible-by-60": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "1010-pairs-of-songs-with-total-durations-divisible-by-60.cpp",
+    "qid": "1010",
+    "timestamp": 1786734945,
+    "title": "Pairs of Songs With Total Durations Divisible by 60",
+    "topics": [
+      "Array",
+      "Hash Table",
+      "Counting"
+    ]
+  },
   "palindrome-number": {
     "difficulty": "Easy",
     "ext": "cpp",
@@ -1140,11 +1179,24 @@
     "ext": "cpp",
     "file": "48-rotate-image.cpp",
     "qid": "48",
-    "timestamp": 1782480872,
+    "timestamp": 1786719079,
     "title": "Rotate Image",
     "topics": [
       "Array",
       "Math",
+      "Matrix"
+    ]
+  },
+  "rotating-the-box": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "1861-rotating-the-box.cpp",
+    "qid": "1861",
+    "timestamp": 1786716341,
+    "title": "Rotating the Box",
+    "topics": [
+      "Array",
+      "Two Pointers",
       "Matrix"
     ]
   },
@@ -1347,7 +1399,7 @@
     "ext": "cpp",
     "file": "560-subarray-sum-equals-k.cpp",
     "qid": "560",
-    "timestamp": 1782761233,
+    "timestamp": 1786741002,
     "title": "Subarray Sum Equals K",
     "topics": [
       "Array",
@@ -1437,6 +1489,19 @@
       "Bucket Sort",
       "Counting",
       "Quickselect"
+    ]
+  },
+  "transpose-matrix": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "867-transpose-matrix.cpp",
+    "qid": "867",
+    "timestamp": 1786716629,
+    "title": "Transpose Matrix",
+    "topics": [
+      "Array",
+      "Matrix",
+      "Simulation"
     ]
   },
   "two-sum": {
