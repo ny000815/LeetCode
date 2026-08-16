@@ -583,6 +583,19 @@
       "Dynamic Programming"
     ]
   },
+  "jump-game": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "55-jump-game.cpp",
+    "qid": "55",
+    "timestamp": 1786806011,
+    "title": "Jump Game",
+    "topics": [
+      "Array",
+      "Dynamic Programming",
+      "Greedy"
+    ]
+  },
   "kids-with-the-greatest-number-of-candies": {
     "difficulty": "Easy",
     "ext": "py",
