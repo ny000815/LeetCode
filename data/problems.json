@@ -417,6 +417,18 @@
       "Simulation"
     ]
   },
+  "gas-station": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "134-gas-station.cpp",
+    "qid": "134",
+    "timestamp": 1787001199,
+    "title": "Gas Station",
+    "topics": [
+      "Array",
+      "Greedy"
+    ]
+  },
   "greatest-common-divisor-of-strings": {
     "difficulty": "Easy",
     "ext": "py",
@@ -590,6 +602,19 @@
     "qid": "55",
     "timestamp": 1786806011,
     "title": "Jump Game",
+    "topics": [
+      "Array",
+      "Dynamic Programming",
+      "Greedy"
+    ]
+  },
+  "jump-game-ii": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "45-jump-game-ii.cpp",
+    "qid": "45",
+    "timestamp": 1786982326,
+    "title": "Jump Game II",
     "topics": [
       "Array",
       "Dynamic Programming",
@@ -869,6 +894,19 @@
       "Dynamic Programming"
     ]
   },
+  "minimum-number-of-arrows-to-burst-balloons": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "452-minimum-number-of-arrows-to-burst-balloons.cpp",
+    "qid": "452",
+    "timestamp": 1786995207,
+    "title": "Minimum Number of Arrows to Burst Balloons",
+    "topics": [
+      "Array",
+      "Greedy",
+      "Sorting"
+    ]
+  },
   "minimum-size-subarray-sum": {
     "difficulty": "Medium",
     "ext": "cpp",
@@ -915,7 +953,7 @@
     "ext": "cpp",
     "file": "435-non-overlapping-intervals.cpp",
     "qid": "435",
-    "timestamp": 1782601796,
+    "timestamp": 1786997693,
     "title": "Non-overlapping Intervals",
     "topics": [
       "Array",
