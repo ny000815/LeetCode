@@ -99,6 +99,19 @@
       "Dynamic Programming"
     ]
   },
+  "best-time-to-buy-and-sell-stock-ii": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "122-best-time-to-buy-and-sell-stock-ii.cpp",
+    "qid": "122",
+    "timestamp": 1787150805,
+    "title": "Best Time to Buy and Sell Stock II",
+    "topics": [
+      "Array",
+      "Dynamic Programming",
+      "Greedy"
+    ]
+  },
   "binary-search": {
     "difficulty": "Easy",
     "ext": "cpp",
@@ -1125,6 +1138,20 @@
       "Two Pointers"
     ]
   },
+  "remove-k-digits": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "402-remove-k-digits.cpp",
+    "qid": "402",
+    "timestamp": 1787163842,
+    "title": "Remove K Digits",
+    "topics": [
+      "String",
+      "Stack",
+      "Greedy",
+      "Monotonic Stack"
+    ]
+  },
   "removing-stars-from-a-string": {
     "difficulty": "Medium",
     "ext": "cpp",
@@ -1510,6 +1537,22 @@
       "Depth-First Search",
       "Breadth-First Search",
       "Binary Tree"
+    ]
+  },
+  "task-scheduler": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "621-task-scheduler.cpp",
+    "qid": "621",
+    "timestamp": 1787155021,
+    "title": "Task Scheduler",
+    "topics": [
+      "Array",
+      "Hash Table",
+      "Greedy",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Counting"
     ]
   },
   "the-kth-factor-of-n": {
