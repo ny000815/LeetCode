@@ -403,6 +403,19 @@
       "Prefix Sum"
     ]
   },
+  "fizz-buzz": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "412-fizz-buzz.cpp",
+    "qid": "412",
+    "timestamp": 1787258235,
+    "title": "Fizz Buzz",
+    "topics": [
+      "Math",
+      "String",
+      "Simulation"
+    ]
+  },
   "flood-fill": {
     "difficulty": "Easy",
     "ext": "cpp",
@@ -1596,6 +1609,21 @@
       "Array",
       "Matrix",
       "Simulation"
+    ]
+  },
+  "two-city-scheduling": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "1029-two-city-scheduling.cpp",
+    "qid": "1029",
+    "timestamp": 1787235265,
+    "title": "Two City Scheduling",
+    "topics": [
+      "Array",
+      "Greedy",
+      "Sorting",
+      "Hungarian Algorithm",
+      "Successive Shortest Path Algorithm"
     ]
   },
   "two-sum": {
