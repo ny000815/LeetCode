@@ -846,6 +846,18 @@
       "Binary Tree"
     ]
   },
+  "maximum-number-of-words-found-in-sentences": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "2114-maximum-number-of-words-found-in-sentences.cpp",
+    "qid": "2114",
+    "timestamp": 1787338255,
+    "title": "Maximum Number of Words Found in Sentences",
+    "topics": [
+      "Array",
+      "String"
+    ]
+  },
   "maximum-score-from-removing-substrings": {
     "difficulty": "Medium",
     "ext": "cpp",
@@ -1097,7 +1109,7 @@
     "ext": "cpp",
     "file": "66-plus-one.cpp",
     "qid": "66",
-    "timestamp": 1785254868,
+    "timestamp": 1787337999,
     "title": "Plus One",
     "topics": [
       "Array",
@@ -1192,6 +1204,17 @@
       "Recursion"
     ]
   },
+  "reverse-integer": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "7-reverse-integer.cpp",
+    "qid": "7",
+    "timestamp": 1787337133,
+    "title": "Reverse Integer",
+    "topics": [
+      "Math"
+    ]
+  },
   "reverse-linked-list": {
     "difficulty": "Easy",
     "ext": "cpp",
@@ -1250,6 +1273,18 @@
     "topics": [
       "Two Pointers",
       "String"
+    ]
+  },
+  "richest-customer-wealth": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "1672-richest-customer-wealth.cpp",
+    "qid": "1672",
+    "timestamp": 1787334423,
+    "title": "Richest Customer Wealth",
+    "topics": [
+      "Array",
+      "Matrix"
     ]
   },
   "roman-to-integer": {
@@ -1406,6 +1441,19 @@
       "Hash Table",
       "String",
       "Sorting"
+    ]
+  },
+  "sorting-the-sentence": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "1859-sorting-the-sentence.cpp",
+    "qid": "1859",
+    "timestamp": 1787340219,
+    "title": "Sorting the Sentence",
+    "topics": [
+      "String",
+      "Sorting",
+      "Bubble Sort"
     ]
   },
   "spiral-matrix": {

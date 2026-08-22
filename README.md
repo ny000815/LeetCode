@@ -4,13 +4,13 @@
 
 ![LeetCode](https://img.shields.io/badge/LeetCode-zaki8-1a1a1a?style=for-the-badge&logo=leetcode&logoColor=white)
 
-![Solved](https://img.shields.io/badge/Solved-132-1f6feb?style=for-the-badge) ![Easy](https://img.shields.io/badge/Easy-62%2F960-00b8a3?style=for-the-badge) ![Medium](https://img.shields.io/badge/Medium-68%2F2103-ffb800?style=for-the-badge) ![Hard](https://img.shields.io/badge/Hard-2%2F966-ef4743?style=for-the-badge)
+![Solved](https://img.shields.io/badge/Solved-136-1f6feb?style=for-the-badge) ![Easy](https://img.shields.io/badge/Easy-65%2F960-00b8a3?style=for-the-badge) ![Medium](https://img.shields.io/badge/Medium-69%2F2103-ffb800?style=for-the-badge) ![Hard](https://img.shields.io/badge/Hard-2%2F966-ef4743?style=for-the-badge)
 
-![🔥 Streak](https://img.shields.io/badge/%F0%9F%94%A5%20Streak-2%20days-ff6b6b?style=for-the-badge) ![🏆 Rank](https://img.shields.io/badge/%F0%9F%8F%86%20Rank-%231%2C301%2C313-8957e5?style=for-the-badge) ![Acceptance](https://img.shields.io/badge/Acceptance-99.2%25-2ea043?style=for-the-badge)
+![🔥 Streak](https://img.shields.io/badge/%F0%9F%94%A5%20Streak-3%20days-ff6b6b?style=for-the-badge) ![🏆 Rank](https://img.shields.io/badge/%F0%9F%8F%86%20Rank-%231%2C283%2C663-8957e5?style=for-the-badge) ![Acceptance](https://img.shields.io/badge/Acceptance-99.3%25-2ea043?style=for-the-badge)
 
-![cpp](https://img.shields.io/badge/cpp-111-555555?style=flat-square) ![java](https://img.shields.io/badge/java-11-555555?style=flat-square) ![py](https://img.shields.io/badge/py-10-555555?style=flat-square)
+![cpp](https://img.shields.io/badge/cpp-115-555555?style=flat-square) ![java](https://img.shields.io/badge/java-11-555555?style=flat-square) ![py](https://img.shields.io/badge/py-10-555555?style=flat-square)
 
-![Array](https://img.shields.io/badge/Array-75-0d1117?style=flat-square) ![String](https://img.shields.io/badge/String-29-0d1117?style=flat-square) ![Hash Table](https://img.shields.io/badge/Hash%20Table-27-0d1117?style=flat-square) ![Two Pointers](https://img.shields.io/badge/Two%20Pointers-21-0d1117?style=flat-square) ![Stack](https://img.shields.io/badge/Stack-16-0d1117?style=flat-square) ![Greedy](https://img.shields.io/badge/Greedy-15-0d1117?style=flat-square)
+![Array](https://img.shields.io/badge/Array-77-0d1117?style=flat-square) ![String](https://img.shields.io/badge/String-31-0d1117?style=flat-square) ![Hash Table](https://img.shields.io/badge/Hash%20Table-27-0d1117?style=flat-square) ![Two Pointers](https://img.shields.io/badge/Two%20Pointers-21-0d1117?style=flat-square) ![Stack](https://img.shields.io/badge/Stack-16-0d1117?style=flat-square) ![Sorting](https://img.shields.io/badge/Sorting-15-0d1117?style=flat-square)
 
 </div>
 
