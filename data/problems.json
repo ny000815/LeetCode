@@ -1139,6 +1139,29 @@
       "String"
     ]
   },
+  "rearrange-words-in-a-sentence": {
+    "difficulty": "Medium",
+    "ext": "cpp",
+    "file": "1451-rearrange-words-in-a-sentence.cpp",
+    "qid": "1451",
+    "timestamp": 1787411452,
+    "title": "Rearrange Words in a Sentence",
+    "topics": [
+      "String",
+      "Sorting"
+    ]
+  },
+  "reformat-the-string": {
+    "difficulty": "Easy",
+    "ext": "cpp",
+    "file": "1417-reformat-the-string.cpp",
+    "qid": "1417",
+    "timestamp": 1787408857,
+    "title": "Reformat The String",
+    "topics": [
+      "String"
+    ]
+  },
   "remove-duplicates-from-sorted-array": {
     "difficulty": "Easy",
     "ext": "cpp",
