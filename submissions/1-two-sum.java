@@ -1,10 +1,11 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        HashMap<Integer, Integer> seen = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>();
         for(int i = 0; i < nums.length; ++i) {
-            int num = nums[i];
-            if (seen.containsKey(target - num)) return new int[]{i, seen.get(target - num)};
-            seen.put(num, i);
+            if (map.containsKey(target-nums[i])) {
+                return new int[]{i, map.get(target-nums[i])};
+            }
+            map.put(nums[i], i);
         }
         return new int[]{};
     }
