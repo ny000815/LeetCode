@@ -207,10 +207,10 @@
   },
   "container-with-most-water": {
     "difficulty": "Medium",
-    "ext": "cpp",
-    "file": "11-container-with-most-water.cpp",
+    "ext": "java",
+    "file": "11-container-with-most-water.java",
     "qid": "11",
-    "timestamp": 1782830457,
+    "timestamp": 1790952258,
     "title": "Container With Most Water",
     "topics": [
       "Array",
@@ -738,6 +738,20 @@
       "Backtracking"
     ]
   },
+  "linked-list-cycle": {
+    "difficulty": "Easy",
+    "ext": "java",
+    "file": "141-linked-list-cycle.java",
+    "qid": "141",
+    "timestamp": 1790954361,
+    "title": "Linked List Cycle",
+    "topics": [
+      "Hash Table",
+      "Linked List",
+      "Two Pointers",
+      "Floyd's Cycle Finding Algorithm"
+    ]
+  },
   "linked-list-random-node": {
     "difficulty": "Medium",
     "ext": "java",
@@ -1225,6 +1239,18 @@
       "Stack",
       "Greedy",
       "Monotonic Stack"
+    ]
+  },
+  "remove-nth-node-from-end-of-list": {
+    "difficulty": "Medium",
+    "ext": "java",
+    "file": "19-remove-nth-node-from-end-of-list.java",
+    "qid": "19",
+    "timestamp": 1790963138,
+    "title": "Remove Nth Node From End of List",
+    "topics": [
+      "Linked List",
+      "Two Pointers"
     ]
   },
   "removing-stars-from-a-string": {
@@ -1738,10 +1764,10 @@
   },
   "two-sum-ii-input-array-is-sorted": {
     "difficulty": "Medium",
-    "ext": "cpp",
-    "file": "167-two-sum-ii-input-array-is-sorted.cpp",
+    "ext": "java",
+    "file": "167-two-sum-ii-input-array-is-sorted.java",
     "qid": "167",
-    "timestamp": 1782605032,
+    "timestamp": 1790951567,
     "title": "Two Sum II - Input Array Is Sorted",
     "topics": [
       "Array",
