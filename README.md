@@ -4,9 +4,9 @@
 
 ![LeetCode](https://img.shields.io/badge/LeetCode-zaki8-1a1a1a?style=for-the-badge&logo=leetcode&logoColor=white)
 
-![Solved](https://img.shields.io/badge/Solved-142-1f6feb?style=for-the-badge) ![Easy](https://img.shields.io/badge/Easy-68%2F968-00b8a3?style=for-the-badge) ![Medium](https://img.shields.io/badge/Medium-72%2F2122-ffb800?style=for-the-badge) ![Hard](https://img.shields.io/badge/Hard-2%2F979-ef4743?style=for-the-badge)
+![Solved](https://img.shields.io/badge/Solved-142-1f6feb?style=for-the-badge) ![Easy](https://img.shields.io/badge/Easy-68%2F969-00b8a3?style=for-the-badge) ![Medium](https://img.shields.io/badge/Medium-72%2F2124-ffb800?style=for-the-badge) ![Hard](https://img.shields.io/badge/Hard-2%2F980-ef4743?style=for-the-badge)
 
-![🔥 Streak](https://img.shields.io/badge/%F0%9F%94%A5%20Streak-2%20days-ff6b6b?style=for-the-badge) ![🏆 Rank](https://img.shields.io/badge/%F0%9F%8F%86%20Rank-%231%2C250%2C223-8957e5?style=for-the-badge) ![Acceptance](https://img.shields.io/badge/Acceptance-99.3%25-2ea043?style=for-the-badge)
+![🔥 Streak](https://img.shields.io/badge/%F0%9F%94%A5%20Streak-3%20days-ff6b6b?style=for-the-badge) ![🏆 Rank](https://img.shields.io/badge/%F0%9F%8F%86%20Rank-%231%2C234%2C936-8957e5?style=for-the-badge) ![Acceptance](https://img.shields.io/badge/Acceptance-99.3%25-2ea043?style=for-the-badge)
 
 ![cpp](https://img.shields.io/badge/cpp-114-555555?style=flat-square) ![java](https://img.shields.io/badge/java-18-555555?style=flat-square) ![py](https://img.shields.io/badge/py-10-555555?style=flat-square)
 
