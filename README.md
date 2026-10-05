@@ -6,9 +6,9 @@
 
 ![Solved](https://img.shields.io/badge/Solved-142-1f6feb?style=for-the-badge) ![Easy](https://img.shields.io/badge/Easy-68%2F969-00b8a3?style=for-the-badge) ![Medium](https://img.shields.io/badge/Medium-72%2F2124-ffb800?style=for-the-badge) ![Hard](https://img.shields.io/badge/Hard-2%2F980-ef4743?style=for-the-badge)
 
-![🔥 Streak](https://img.shields.io/badge/%F0%9F%94%A5%20Streak-3%20days-ff6b6b?style=for-the-badge) ![🏆 Rank](https://img.shields.io/badge/%F0%9F%8F%86%20Rank-%231%2C234%2C936-8957e5?style=for-the-badge) ![Acceptance](https://img.shields.io/badge/Acceptance-99.3%25-2ea043?style=for-the-badge)
+![🔥 Streak](https://img.shields.io/badge/%F0%9F%94%A5%20Streak-1%20days-ff6b6b?style=for-the-badge) ![🏆 Rank](https://img.shields.io/badge/%F0%9F%8F%86%20Rank-%231%2C235%2C768-8957e5?style=for-the-badge) ![Acceptance](https://img.shields.io/badge/Acceptance-99.3%25-2ea043?style=for-the-badge)
 
-![cpp](https://img.shields.io/badge/cpp-114-555555?style=flat-square) ![java](https://img.shields.io/badge/java-18-555555?style=flat-square) ![py](https://img.shields.io/badge/py-10-555555?style=flat-square)
+![cpp](https://img.shields.io/badge/cpp-113-555555?style=flat-square) ![java](https://img.shields.io/badge/java-19-555555?style=flat-square) ![py](https://img.shields.io/badge/py-10-555555?style=flat-square)
 
 ![Array](https://img.shields.io/badge/Array-79-0d1117?style=flat-square) ![String](https://img.shields.io/badge/String-34-0d1117?style=flat-square) ![Hash Table](https://img.shields.io/badge/Hash%20Table-29-0d1117?style=flat-square) ![Two Pointers](https://img.shields.io/badge/Two%20Pointers-23-0d1117?style=flat-square) ![Sorting](https://img.shields.io/badge/Sorting-16-0d1117?style=flat-square) ![Stack](https://img.shields.io/badge/Stack-16-0d1117?style=flat-square)
 

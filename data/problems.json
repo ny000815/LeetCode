@@ -26,10 +26,10 @@
   },
   "add-two-numbers": {
     "difficulty": "Medium",
-    "ext": "cpp",
-    "file": "2-add-two-numbers.cpp",
+    "ext": "java",
+    "file": "2-add-two-numbers.java",
     "qid": "2",
-    "timestamp": 1722731894,
+    "timestamp": 1791162795,
     "title": "Add Two Numbers",
     "topics": [
       "Linked List",
