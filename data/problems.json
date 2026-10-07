@@ -223,7 +223,7 @@
     "ext": "java",
     "file": "217-contains-duplicate.java",
     "qid": "217",
-    "timestamp": 1780709222,
+    "timestamp": 1791295961,
     "title": "Contains Duplicate",
     "topics": [
       "Array",
@@ -820,10 +820,10 @@
   },
   "lru-cache": {
     "difficulty": "Medium",
-    "ext": "cpp",
-    "file": "146-lru-cache.cpp",
+    "ext": "java",
+    "file": "146-lru-cache.java",
     "qid": "146",
-    "timestamp": 1782398999,
+    "timestamp": 1791302262,
     "title": "LRU Cache",
     "topics": [
       "Hash Table",
@@ -1066,6 +1066,19 @@
       "Breadth-First Search",
       "Union-Find",
       "Matrix"
+    ]
+  },
+  "number-of-recent-calls": {
+    "difficulty": "Easy",
+    "ext": "java",
+    "file": "933-number-of-recent-calls.java",
+    "qid": "933",
+    "timestamp": 1791299046,
+    "title": "Number of Recent Calls",
+    "topics": [
+      "Design",
+      "Queue",
+      "Data Stream"
     ]
   },
   "number-of-students-unable-to-eat-lunch": {
@@ -1733,6 +1746,21 @@
       "Array",
       "Matrix",
       "Simulation"
+    ]
+  },
+  "trapping-rain-water": {
+    "difficulty": "Hard",
+    "ext": "java",
+    "file": "42-trapping-rain-water.java",
+    "qid": "42",
+    "timestamp": 1791310634,
+    "title": "Trapping Rain Water",
+    "topics": [
+      "Array",
+      "Two Pointers",
+      "Dynamic Programming",
+      "Stack",
+      "Monotonic Stack"
     ]
   },
   "two-city-scheduling": {
