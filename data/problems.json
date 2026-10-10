@@ -138,6 +138,19 @@
       "Binary Tree"
     ]
   },
+  "binary-tree-level-order-traversal": {
+    "difficulty": "Medium",
+    "ext": "java",
+    "file": "102-binary-tree-level-order-traversal.java",
+    "qid": "102",
+    "timestamp": 1791578391,
+    "title": "Binary Tree Level Order Traversal",
+    "topics": [
+      "Tree",
+      "Breadth-First Search",
+      "Binary Tree"
+    ]
+  },
   "boats-to-save-people": {
     "difficulty": "Medium",
     "ext": "cpp",
