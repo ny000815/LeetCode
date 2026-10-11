@@ -1146,6 +1146,20 @@
       "Counting"
     ]
   },
+  "palindrome-linked-list": {
+    "difficulty": "Easy",
+    "ext": "java",
+    "file": "234-palindrome-linked-list.java",
+    "qid": "234",
+    "timestamp": 1791646003,
+    "title": "Palindrome Linked List",
+    "topics": [
+      "Linked List",
+      "Two Pointers",
+      "Stack",
+      "Recursion"
+    ]
+  },
   "palindrome-number": {
     "difficulty": "Easy",
     "ext": "cpp",
